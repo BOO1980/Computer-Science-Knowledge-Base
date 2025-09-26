@@ -6,11 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TM129 — Module</title>
 
-  
-  <link rel="stylesheet" href="../../assets/styles.css" data-ou-styles/>
+
+  <link rel="stylesheet" href="../../assets/styles.css" data-ou-styles />
   <script defer src="../../assets/manifest.js"></script>
   <script defer src="../../assets/script.js"></script>
   <script defer src="../../assets/content.js"></script>
+  <script src="manifest.js"></script>
 </head>
 
 <body>
@@ -32,22 +33,133 @@
     <div class="card">
       <div data-ou-progress-course="TM129"></div>
     </div>
-    <section class="card" style="margin-top:16px;">
-      <h2>Topics</h2>
-      <div class="list" id="list-TM129"></div>
-    </section>
 
 
-    <section class="card" style="margin-top:16px;">
-      <h2>Related: Networking Essentials</h2>
-      <div class="list">
-        <a href="../../content/TM129/Networking Essentials for TM129 - 25J/Module1/1.1 - NetworkTypes.html">1.1
-          NetworkTypes.html</a>
-      </div>
-    </section>
+
 
   </main>
   <footer class="footer">Built for our Open University journey — keep learning a little every day.</footer>
+
+
+
+
+  <script>
+    // Self-contained grouped Topics renderer (file:// friendly)
+    window.addEventListener('load', function () {
+      try {
+        var path = location.pathname.replace(/\\/g, '/').split('/').filter(Boolean);
+        var i = path.indexOf('content');
+        var moduleCode = (i >= 0 && path[i + 1]) ? path[i + 1] : null;
+        var bag = window.OU_MODULE_MANIFESTS || {};
+        var manifest = moduleCode ? bag[moduleCode] : null;
+        var mount = document.getElementById('topics');
+        if (!mount) return;
+
+        if (!manifest || !Array.isArray(manifest.topics) || manifest.topics.length === 0) {
+          mount.innerHTML = '<p style="opacity:.7">No topics found for this module.</p>';
+          return;
+        }
+
+        // Group by first folder before the first '/' in href
+        var groups = {};
+        manifest.topics.forEach(function (t) {
+          var href = String(t.href || '');
+          var parts = href.split('/');
+          var group = parts.length > 1 ? parts[0] : 'Other';
+          if (!groups[group]) groups[group] = [];
+          groups[group].push({ title: t.title || href, href: href });
+        });
+
+        // Build DOM: each group gets a <h3> and a <ul class="list">
+        mount.innerHTML = '';
+        Object.keys(groups).sort().forEach(function (g) {
+          var h = document.createElement('h3');
+          h.textContent = g;
+          mount.appendChild(h);
+          var ul = document.createElement('ul');
+          ul.className = 'list';
+          groups[g].sort(function (a, b) { return a.title.localeCompare(b.title, undefined, { numeric: true, sensitivity: 'base' }); })
+            .forEach(function (item) {
+              var li = document.createElement('li');
+              var a = document.createElement('a');
+              a.href = item.href;
+              a.textContent = item.title;
+              li.appendChild(a);
+              ul.appendChild(li);
+            });
+          mount.appendChild(ul);
+        });
+      } catch (e) {
+        console.error('Failed to render grouped topics:', e);
+      }
+    });
+  </script>
+
+  <script>
+    // Self-contained grouped Topics renderer (with mount fallback)
+    window.addEventListener('load', function () {
+      try {
+        var path = location.pathname.replace(/\\/g, '/').split('/').filter(Boolean);
+        var i = path.indexOf('content');
+        var moduleCode = (i >= 0 && path[i + 1]) ? path[i + 1] : null;
+        var bag = window.OU_MODULE_MANIFESTS || {};
+        var manifest = moduleCode ? bag[moduleCode] : null;
+
+        // mount fallback: create Topics card if missing
+        var mount = document.getElementById('topics');
+        if (!mount) {
+          var sec = document.createElement('section');
+          sec.className = 'card'; sec.id = 'topics-card';
+          var h2 = document.createElement('h2'); h2.textContent = 'Topics';
+          mount = document.createElement('div'); mount.id = 'topics';
+          sec.appendChild(h2); sec.appendChild(mount);
+          (document.querySelector('main') || document.body).appendChild(sec);
+        }
+
+        if (!manifest || !Array.isArray(manifest.topics) || manifest.topics.length === 0) {
+          mount.innerHTML = '<p style="opacity:.7">No topics found for this module.</p>';
+          return;
+        }
+
+        var groups = {};
+        manifest.topics.forEach(function (t) {
+          var href = String(t.href || '');
+          var parts = href.split('/');
+          var group = parts.length > 1 ? parts[0] : 'Other';
+          if (!groups[group]) groups[group] = [];
+          groups[group].push({ title: t.title || href, href: href });
+        });
+
+        mount.innerHTML = '';
+        Object.keys(groups).sort(function (a, b) { return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }); })
+          .forEach(function (g) {
+            var h = document.createElement('h3');
+            h.textContent = g;
+            mount.appendChild(h);
+            var ul = document.createElement('ul');
+            ul.className = 'list';
+            groups[g].sort(function (a, b) { return a.title.localeCompare(b.title, undefined, { numeric: true, sensitivity: 'base' }); })
+              .forEach(function (item) {
+                var li = document.createElement('li');
+                var a = document.createElement('a');
+                a.href = item.href;
+                a.textContent = item.title;
+                li.appendChild(a);
+                ul.appendChild(li);
+              });
+            mount.appendChild(ul);
+          });
+      } catch (e) {
+        console.error('Failed to render grouped topics:', e);
+      }
+    });
+  </script>
+  <script>
+    // call after your Topics list is rendered
+    window.addEventListener('load', function () {
+      if (window.OU_initProgress) window.OU_initProgress();
+    });
+  </script>
 </body>
 
 </html>
