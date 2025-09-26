@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <meta charset="UTF-8" />
+    <title>Open University Contents</title>
+<link rel="stylesheet" href="../../assets/styles.css"/>
+<script>
+(function(){
+  var path = location.pathname.replace(/\/g,'/');
+  var idx  = path.indexOf('/content/');
+  var prefix = '';
+  if (idx !== -1) {
+    var after = path.slice(idx + '/content/'.length);
+    var depth = (after.match(/\//g) || []).length;
+    prefix = '../'.repeat(depth + 1);
+  }
+  if (!document.querySelector('link[data-ou-styles]')) {
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = prefix + 'assets/styles.css';
+    link.setAttribute('data-ou-styles','');
+    document.head.appendChild(link);
+  }
+  function add(js){
+    if (document.querySelector('script[src$="/'+js+'"]')) return;
+    var s = document.createElement('script');
+    s.defer = true;
+    s.src = prefix + 'assets/' + js;
+    document.head.appendChild(s);
+  }
+  add('manifest.js');
+  add('script.js');
+  add('content.js');
+})();
+</script>
+</head>
+<body>
+    <h1>Open University Contents</h1>
+    <h2>MU123: Discovering Mathematics</h2>
+    <h2>Unit 0: Guide</h2>
+    <h2>Unit 1: Numbers and Patterns</h2>
+    <ul>
+    <li><a href="C:\Repos\openUniversity\MU123\Notes\MU123 Unit 1\1-Welcome.html">Welcome</a></li>
+    <li><a href="C:\Repos\openUniversity\MU123\Notes\MU123 Unit 1\2-Bidmas.html">BIDMAS</a></li>
+    <li><a href="C:\Repos\openUniversity\MU123\Notes\MU123 Unit 1\3-Powers.html">Powers</a></li>
+    <li><a href="C:\Repos\openUniversity\MU123\Notes\MU123 Unit 1\4-Sum.html">Sum</a></li>
+    <li><a href="C:\Repos\openUniversity\MU123\Notes\MU123 Unit 1\5-Difference.html">Difference</a></li>
+    <li><a href="C:\Repos\openUniversity\MU123\Notes\MU123 Unit 1\6-Product.html">Product</a></li>
+    <li><a href="C:\Repos\openUniversity\MU123\Notes\MU123 Unit 1\7-Quotient.html">Quotient</a></li>
+    </ul>
+<script defer src="../../assets/content.js"></script>
+<script defer src="../../assets/script.js"></script>
+<script defer src="../../assets/manifest.js"></script>
+</body>
+</html>

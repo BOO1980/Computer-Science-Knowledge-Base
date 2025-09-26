@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Devices in Packet Tracer</title>
+<link rel="stylesheet" href="../../assets/styles.css"/>
+<script>
+(function(){
+  var path = location.pathname.replace(/\/g,'/');
+  var idx  = path.indexOf('/content/');
+  var prefix = '';
+  if (idx !== -1) {
+    var after = path.slice(idx + '/content/'.length);
+    var depth = (after.match(/\//g) || []).length;
+    prefix = '../'.repeat(depth + 1);
+  }
+  if (!document.querySelector('link[data-ou-styles]')) {
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = prefix + 'assets/styles.css';
+    link.setAttribute('data-ou-styles','');
+    document.head.appendChild(link);
+  }
+  function add(js){
+    if (document.querySelector('script[src$="/'+js+'"]')) return;
+    var s = document.createElement('script');
+    s.defer = true;
+    s.src = prefix + 'assets/' + js;
+    document.head.appendChild(s);
+  }
+  add('manifest.js');
+  add('script.js');
+  add('content.js');
+})();
+</script>
+</head>
+<body>
+    <h1>IoT Devices in Packet Tracer</h1>
+<h2>1.1.1 Introduction to IoT Devices in PT</h2>
+<ul>
+<li>In simple terms, the IoT is a collection of networked sensors, actuators, and smart devices that gather and share data</li>
+<li>To locate the available sensors and smart devices in Packet Tracer: Select End devices from the "Device-Specific" selection box at the lower-left hand side of the screen
+</li>
+<img src="./graphics/0.0-EndDevices.png" alt="End Devices">
+<l
+</ul>
+<script defer src="../../assets/content.js"></script>
+<script defer src="../../assets/script.js"></script>
+<script defer src="../../assets/manifest.js"></script>
+</body>
+</html>

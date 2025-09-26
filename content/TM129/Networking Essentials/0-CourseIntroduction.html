@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Introduction</title>
+<link rel="stylesheet" href="../../assets/styles.css"/>
+<script>
+(function(){
+  var path = location.pathname.replace(/\/g,'/');
+  var idx  = path.indexOf('/content/');
+  var prefix = '';
+  if (idx !== -1) {
+    var after = path.slice(idx + '/content/'.length);
+    var depth = (after.match(/\//g) || []).length;
+    prefix = '../'.repeat(depth + 1);
+  }
+  if (!document.querySelector('link[data-ou-styles]')) {
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = prefix + 'assets/styles.css';
+    link.setAttribute('data-ou-styles','');
+    document.head.appendChild(link);
+  }
+  function add(js){
+    if (document.querySelector('script[src$="/'+js+'"]')) return;
+    var s = document.createElement('script');
+    s.defer = true;
+    s.src = prefix + 'assets/' + js;
+    document.head.appendChild(s);
+  }
+  add('manifest.js');
+  add('script.js');
+  add('content.js');
+})();
+</script>
+</head>
+<body>
+    <h1>Course Introduction</h1>
+    <ul>
+    <li>The Networking Essentials course provides learners with a broad foundational understanding of networking</li>
+    <li>The learner is presented with an engaging and exploratory view of networks, the devices that comprise them, how they work, and basic troubleshooting tools and techniques.</li>
+    <li>This course also teaches intermediate knowledge and skills for networking by covering the basic concepts and skills needed to build a home office network and a small Cisco office network</li>
+    <li>It prepares the learner to move into Cybersecurity or DevNet by going deeper into Ethernet, IP Addressing and the transport layer</li>
+    <li>This course also examines the physical layer in depth, topologies at the data link layer, and basic routing at the network layer.</li>
+    <li>It delves deeply into static and dynamic IPv6 addressing and address resolution.</li>
+    <li>it then examines the components and functionality of Cisco switches and routers</li>
+    <li>The course provides an introduction to troubleshooting methodologies and examines how to troubleshoot some of the most common networking issues<li>
+    <li>The learner will review different equipment hardware and will need to configure network setting on different devices and operating systems</li>
+    </ul>
+<script defer src="../../assets/content.js"></script>
+<script defer src="../../assets/script.js"></script>
+<script defer src="../../assets/manifest.js"></script>
+</body>
+</html>

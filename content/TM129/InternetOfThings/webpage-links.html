@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebpageLinks</title>
+<link rel="stylesheet" href="../../assets/styles.css"/>
+<script>
+(function(){
+  var path = location.pathname.replace(/\/g,'/');
+  var idx  = path.indexOf('/content/');
+  var prefix = '';
+  if (idx !== -1) {
+    var after = path.slice(idx + '/content/'.length);
+    var depth = (after.match(/\//g) || []).length;
+    prefix = '../'.repeat(depth + 1);
+  }
+  if (!document.querySelector('link[data-ou-styles]')) {
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = prefix + 'assets/styles.css';
+    link.setAttribute('data-ou-styles','');
+    document.head.appendChild(link);
+  }
+  function add(js){
+    if (document.querySelector('script[src$="/'+js+'"]')) return;
+    var s = document.createElement('script');
+    s.defer = true;
+    s.src = prefix + 'assets/' + js;
+    document.head.appendChild(s);
+  }
+  add('manifest.js');
+  add('script.js');
+  add('content.js');
+})();
+</script>
+</head>
+<body>
+    <h1>Webpage Links</h1>
+    <ul>
+        <li><a href="https://www.netacad.com/launch?id=fc0847b7-e6fc-4597-bc31-38ddd6b07a2f&tab=curriculum&view=013f6880-f9c7-534a-a23a-651ea7791935">Exploring Internet of Things with Cisco Packet Tracer
+</a></li>
+<li><a href="https://www.netacad.com/help">Netacad help</a></li>
+    </ul>
+<script defer src="../../assets/content.js"></script>
+<script defer src="../../assets/script.js"></script>
+<script defer src="../../assets/manifest.js"></script>
+</body>
+</html>

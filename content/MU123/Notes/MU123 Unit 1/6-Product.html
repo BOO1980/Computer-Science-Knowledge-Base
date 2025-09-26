@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <meta charset="UTF-8" />
+    <title>Product</title>
+<link rel="stylesheet" href="../../assets/styles.css"/>
+<script>
+(function(){
+  var path = location.pathname.replace(/\/g,'/');
+  var idx  = path.indexOf('/content/');
+  var prefix = '';
+  if (idx !== -1) {
+    var after = path.slice(idx + '/content/'.length);
+    var depth = (after.match(/\//g) || []).length;
+    prefix = '../'.repeat(depth + 1);
+  }
+  if (!document.querySelector('link[data-ou-styles]')) {
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = prefix + 'assets/styles.css';
+    link.setAttribute('data-ou-styles','');
+    document.head.appendChild(link);
+  }
+  function add(js){
+    if (document.querySelector('script[src$="/'+js+'"]')) return;
+    var s = document.createElement('script');
+    s.defer = true;
+    s.src = prefix + 'assets/' + js;
+    document.head.appendChild(s);
+  }
+  add('manifest.js');
+  add('script.js');
+  add('content.js');
+})();
+</script>
+</head>
+<body>
+    <h1>Product</h1>
+    <p>The product is the result of multiplying two or more numbers.</p>
+    <h2>Examples</h2>   
+    <ul>
+        <li>Example 1: 4 × 5 = 20</li>
+        <li>Example 2: 3 × 7 × 2 = 42</li>
+    </ul>
+    <h2>Useful Links</h2>
+    <ul>
+        <li><a href="https://www.khanacademy.org/math/cc-2nd-grade-math/cc-2nd-multiply-100/cc-2nd-math-strategies-for-multiplying-within-100/e/select-strategies-for-multiplying-within-100">Khan Academy - Strategies for Multiplying within 100</a></li>
+        <li><a href="https://www.mathsisfun.com/numbers/multiplication.html">Math is Fun - Multiplication</a></li>
+        <li><a href="https://www.khanacademy.org/math/cc-3rd-grade-math/cc-3rd-multiply-1000/cc-3rd-multiplication-within-1000/e/multiplication-within-1000">Khan Academy - Multiplication within 1000</a></li>
+   <li><a href="https://www.open.edu/openlearn/science-maths-technology/mathematics-statistics/squares-roots-and-powers/content-section-0?active-tab=description-tab&_gl=1*arazke*_gcl_au*NzM4MjI2NzgxLjE3NTI4MzE0MzM.">Open University - squares-roots-and-powers</a></li>
+    </ul>
+<script defer src="../../assets/content.js"></script>
+<script defer src="../../assets/script.js"></script>
+<script defer src="../../assets/manifest.js"></script>
+</body>
+</html>

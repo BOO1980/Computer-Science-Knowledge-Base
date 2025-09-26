@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OU Study Hub — Home</title>
+
+  
+
+
+  <link rel="stylesheet" href="assets/styles.css"/>
+  <script defer src="assets/manifest.js"></script>
+  <script defer src="assets/script.js"></script>
+</head>
+
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner container">
+      <div class="brand"><a href="index.html">OU Study Hub</a></div>
+      <div class="navlinks"><button class="btn" data-ou-mode-toggle onclick="ouToggleMode()">☀️ Light</button>
+        <a class="btn" href="index.html">Home</a>
+        <a class="btn" href="contents.html">Contents</a>
+        <a class="btn" href="navigation.html">Search</a>
+        <a class="btn" href="advice.html">Study Tips</a>
+        <a class="btn" href="review.html">Review</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="hero">
+      <div class="card">
+        <div class="kicker">Welcome</div>
+        <h1>Our Open University Study Hub</h1>
+        <p>This site collects what we’ve studied so far across modules (TM111, TM129, MU123, and more). Use the Contents
+          to browse everything, or Search to jump straight to a topic.</p>
+        <div class="grid" style="margin-top: 16px;">
+          <a class="badge" href="contents.html">Contents</a>
+          <a class="badge" href="navigation.html">Search</a>
+          <a class="badge" href="advice.html">Study Tips</a>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Quick Links</h2>
+        <div id="quick-links" class="list"></div>
+
+      </div>
+    </section>
+    <section style="margin-top: 16px;" class="grid">
+      <div class="card">
+        <h2>What’s inside?</h2>
+        <p>• Your original notes and PDFs are preserved under <code>/content</code>. <br />
+          • Clean navigation and a searchable index. <br />
+          • Mobile-friendly design and dark mode for late-night study. </p>
+      </div>
+      <div class="card">
+        <h2>How to add more</h2>
+        <p>Drop new notes into the <code>content/</code> folder and they’ll appear automatically in Contents &amp;
+          Search. Use descriptive file names (e.g., <em>1.2-Data-Transmission.html</em>).</p>
+      </div>
+    </section>
+
+    <section class="grid" style="margin-top:16px;">
+      <div data-theme="MU123">
+        <div class="card">
+          <div data-ou-progress-course="MU123"></div>
+          <div class="list"><a href="content/MU123/index.html">Open MU123 module page</a></div>
+        </div>
+      </div>
+      <div data-theme="TM111">
+        <div class="card">
+          <div data-ou-progress-course="TM111"></div>
+          <div class="list"><a href="content/TM111/index.html">Open TM111 module page</a></div>
+        </div>
+      </div>
+      <div data-theme="TM129">
+        <div class="card">
+          <div data-ou-progress-course="TM129"></div>
+          <div class="list"><a href="content/TM129/index.html">Open TM129 module page</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    Built for our Open University journey — keep learning a little every day.
+  </footer>
+
+  
+<script>window.addEventListener("load",function(){ if(window.OU_onHome) window.OU_onHome(); });</script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <meta charset="UTF-8" />
+    <title>Introducing Part 1</title>
+<link rel="stylesheet" href="../../assets/styles.css"/>
+<script>
+(function(){
+  var path = location.pathname.replace(/\/g,'/');
+  var idx  = path.indexOf('/content/');
+  var prefix = '';
+  if (idx !== -1) {
+    var after = path.slice(idx + '/content/'.length);
+    var depth = (after.match(/\//g) || []).length;
+    prefix = '../'.repeat(depth + 1);
+  }
+  if (!document.querySelector('link[data-ou-styles]')) {
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = prefix + 'assets/styles.css';
+    link.setAttribute('data-ou-styles','');
+    document.head.appendChild(link);
+  }
+  function add(js){
+    if (document.querySelector('script[src$="/'+js+'"]')) return;
+    var s = document.createElement('script');
+    s.defer = true;
+    s.src = prefix + 'assets/' + js;
+    document.head.appendChild(s);
+  }
+  add('manifest.js');
+  add('script.js');
+  add('content.js');
+})();
+</script>
+</head>
+<body>
+    <h1>Introducing Part 1</h1>
+    <ul>
+    <li>You will learn about the historical development of communication technologies and computers and their role in today's society</li>
+    <li>You will consider examples of digital technologies in the world around you and their influence on your life</li>
+    <li>You will need to know that a digital technology is any technolgoy based on representing data as sequences of numbers</li>
+    <li>In this module, the term dgital world refers to the influence of computer on the world, in a wide variety of forms, linked by communications networks</li>
+    <li>Most of the use of technology that you'll consider will be legal and harmless</li>
+    <li>However you will also look at some examples that subvert laws and the rights of others</li>
+    <li>Some examples will move into the worlds of crime and terror, where information is transmitted that others want to intercept, control or suppress</li>
+    <li>Effective participation in the digital world therefore requires you to become aware of many technical, social and ethical pitfalls, as well as some ways you can avoid them</li>
+    </ul>
+<script defer src="../../assets/content.js"></script>
+<script defer src="../../assets/script.js"></script>
+<script defer src="../../assets/manifest.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <meta charset="UTF-8" />
+    <title>Computers and Communications: from rarity to ubiquity</title>
+<link rel="stylesheet" href="../../assets/styles.css"/>
+<script>
+(function(){
+  var path = location.pathname.replace(/\/g,'/');
+  var idx  = path.indexOf('/content/');
+  var prefix = '';
+  if (idx !== -1) {
+    var after = path.slice(idx + '/content/'.length);
+    var depth = (after.match(/\//g) || []).length;
+    prefix = '../'.repeat(depth + 1);
+  }
+  if (!document.querySelector('link[data-ou-styles]')) {
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = prefix + 'assets/styles.css';
+    link.setAttribute('data-ou-styles','');
+    document.head.appendChild(link);
+  }
+  function add(js){
+    if (document.querySelector('script[src$="/'+js+'"]')) return;
+    var s = document.createElement('script');
+    s.defer = true;
+    s.src = prefix + 'assets/' + js;
+    document.head.appendChild(s);
+  }
+  add('manifest.js');
+  add('script.js');
+  add('content.js');
+})();
+</script>
+</head>
+<body>
+    <h1>Computers and Communications: from rarity to ubiquity</h1>
+    <ul>
+    <li>The theme of this section is the development of <strong>digital technologies</strong></strong></li>
+    <li>From the physical large and highly expensive equipment of the 1950s to the omnipresent <strong>networks</strong> and computer-based devices upon which our digital lives are founded today</li>
+    <li>In this section you will compare the development of the computer to the development of the telephone</li>
+    <li>Describe some of the digital technologies that form an integral part of many of our lives</li>
+    <li>Introduce the term Information Society</li>
+    </ul>
+    <h2>1.1.1 The Telephone</h2>
+    <ul><li>In the 1950s telephones represented the cutting edge of technology</li>
+    <li>However, they were not only large and expensive to purchase but also inconvenient to use</li>
+    <li>If you wanted to make a call over a distance of more than 15 miles you would had to first call the operator who would then make the connection</li>
+    <li>Telephones were also expensive to use </li>
+    <li>Few people had a home telephone and even fewer made long-distance calls, so most people made use of public telephone boxes</li>
+    <li>The high cost of using a telephone ensured that anyone who had one tended to use it infrequently, and then only for short calls.</li>
+    <li>In the 1959, The general Post Office, which ran almost all UK telephone systems at the time, introduced subscriber trunk dialling (STD)</li>
+    <li>STD allowed users to dial long-distance calls without going through an operator, making it more convenient and affordable.</li>
+    <li>STD was a major step towards the ubiquity of telephones, as it made long-distance communication more accessible to the general public.</li>
+    <h2>1.1.2 The Computer</h2>
+    <ul>
+        <li>There were very few computers in the 1950s, and those in existence were treated as objects of wonder with almost mythical powers</li>
+        <li>Computers were large, expensive, and used primarily for scientific and military purposes</li>
+        <li>They were also delicate and consumed a lot of electricty, wasting much of it as heat</li>
+        <li>Nowadays however a computer is just another item stocked in supermarkets</li>
+        <li>Computers have been incorporated into a kaleidoscopic range of devices that bear no resemblance to what was once thought of as a computer</li>
+        <li>Powerful computers now sit at the heart of objects as diverse as smartphones and game consoles, cars and vacuum cleaners</li>
+        <li>It is possible to incorporate computer technologies into almost any object no matter how small, cheap or disposable</li>
+        <li>These smart devices are "talking to one another", not just within a single room or building, but across the globe via the internet using the world wide web</li>
+        <li>As the computer vanishes from out of sight it becomes vastly more powerful and ever-present.  To use the term "ubiquitous computing" is to recognize this shift</li>
+        <li>In the smartphone, two previous seperate technologies, computers and the mobile telephone systems have become combined in one device</li>
+        <li>This convergence of computing and telephone technologies has resulted in new goods and services for people to buy and use</li>
+        <li>i.e. Many people who were not previously interested in computers are happy to take photographs on their mobile phones and share them.  In this situation the computer in the phone handles the processing of the photograph and enables it to be sent by email or uploaded to social media</li>
+        
+    </ul>
+    <h3>Box 1.1 - The internet and the web</h3>
+    <ul>
+    <li>Although in everyday life people tend to use the terms interchangeably, in reality they are two separate (though related) entities</li>
+    <li>The Internet is a global network of networks: an internetwork (hence its name)</li>
+    <li>The Internet is the infrastructure that connects computers together</li>
+    <li>The web (short for world wide web) on the other hand is a service that links files across computers, allowing us to access and share information.</li>
+    <li>Thus the web is a software system that has been built upon the hardware of the internet</li>
+    <li>It is technically incorrect to refer to "searching" or "browsing" the internet.  When you carry out an online search you are in fact searching the web</li>
+    </ul>
+    <h2>1.1.3 The networked world</h2>
+    <h3>Network and the internet</h3>
+    <ul>
+    <li>As a result of advances in <strong>Information and communication technology(ICT)</strong> our notions of time and location are changing</li>
+    <li>Distance is no longer a barrier to commercial or social contact for those of us connected to suitable networks</li>
+    <li>Some people may find it difficult to imagine not having access to information and services that play a crucial role in their daily lives.</li>
+    <li>Others may feel that they have no part to play in the digital world because their network access is very limited or even non-existent.</li></ul>
+<script defer src="../../assets/content.js"></script>
+<script defer src="../../assets/script.js"></script>
+<script defer src="../../assets/manifest.js"></script>
+</body>
+</html>
