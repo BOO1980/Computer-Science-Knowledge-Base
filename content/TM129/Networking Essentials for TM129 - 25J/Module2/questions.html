@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions</title>
+    <link rel="stylesheet" href="../../../../assets/styles.css" />
+    <script>
+        (function () {
+            var path = location.pathname.replace(/\\/g, '/');
+            var idx = path.indexOf('/content/');
+            var prefix = '';
+            if (idx !== -1) {
+                var after = path.slice(idx + '/content/'.length);
+                var depth = (after.match(/\//g) || []).length;
+                prefix = '../'.repeat(depth + 1);
+            }
+            if (!document.querySelector('link[data-ou-styles]')) {
+                var link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = prefix + 'assets/styles.css';
+                link.setAttribute('data-ou-styles', '');
+                document.head.appendChild(link);
+            }
+            function add(js) {
+                if (document.querySelector('script[src$="/' + js + '"]')) return;
+                var s = document.createElement('script');
+                s.defer = true;
+                s.src = prefix + 'assets/' + js;
+                document.head.appendChild(s);
+            }
+            add('manifest.js');
+            add('script.js');
+            add('content.js');
+        })();
+    </script>
+</head>
+
+<body>
+    <h1>Questions</h1>
+    <h2>2.1 Clients and Servers</h2>
+    <ol>
+        <li>What is the role of a client in a network?</li>
+        <li>What is the role of a server in a network?</li>
+        <li>How can a computer act as both a client and a server?</li>
+        <li>What software is typically used for client applications?</li>
+        <li>What software is typically used for server applications?</li>
+        <li>A computer that has software installed to provide information such as email or web pages to other devices is
+            known as a?</li>
+        <li>A smart phone uses web browser software to request and display a web page. The smartphone is considered what
+            type of computer?</li>
+        <li>A network where two computers are communicating with each other as both a client and as a server is known as
+            a?</li>
+    </ol>
+    <h2>2.2 Network Components</h2>
+    <ol>
+        <li>What is the purpose of a router in a network?</li>
+        <li>What is the purpose of a switch in a network?</li>
+        <li>What is the purpose of a firewall in a network?</li>
+        <li>What is the purpose of an access point in a network?</li>
+        <li>What is the difference between a modem and a router?</li>
+        <li>Which device connects multiple devices within a local area network (LAN) and uses MAC addresses to forward
+            data to the correct destination?</li>
+        <li>Which device connects different networks together and routes data packets based on their IP addresses?</li>
+        <li>Which device provides wireless connectivity to devices within a local area network (LAN)?</li>
+        <li>Which device monitors and controls incoming and outgoing network traffic based on predetermined security
+            rules?
+    </ol>
+    <h2>2.3 ISP connectivity options. </h2>
+    <ol>
+        <li>What are the main types of internet connectivity options provided by ISPs?</li>
+        <li>What are the advantages and disadvantages of DSL internet connectivity?</li>
+        <li>What are the advantages and disadvantages of cable internet connectivity?</li>
+        <li>What are the advantages and disadvantages of fiber optic internet connectivity?</li>
+        <li>What are the advantages and disadvantages of satellite internet connectivity?</li>
+        <li>What are the advantages and disadvantages of cellular (4G/5G) internet connectivity?</li>
+        <li>Which type of internet connection typically offers the highest speeds and reliability?</li>
+        <li>Which type of internet connection is most commonly used in rural or remote areas where other options may not
+            be
+            available?</li>
+        <li>Which type of internet connection uses existing telephone lines to provide internet access?</li>
+        <li>Which type of internet connection uses coaxial cables to provide internet access?</li>
+        <li>What is a service that provides an Internet data signal on the same network that delivers broadcast
+            television and phone services? </li>
+        <li>What is a service that provides high bandwidth always on connection using existing landline telephone wires?
+        </li>
+        <li>What is an Internet service that uses mobile phone networks to transmit data? </li>
+    </ol>
+</body>
+
+</html>
