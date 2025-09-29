@@ -1,0 +1,69 @@
+Well.
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions</title>
+    <link rel="stylesheet" href="../../../../assets/styles.css" />
+    <script>
+        (function () {
+            var path = location.pathname.replace(/\\/g, '/');
+            var idx = path.indexOf('/content/');
+            var prefix = '';
+            if (idx !== -1) {
+                var after = path.slice(idx + '/content/'.length);
+                var depth = (after.match(/\//g) || []).length;
+                prefix = '../'.repeat(depth + 1);
+            }
+            if (!document.querySelector('link[data-ou-styles]')) {
+                var link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = prefix + 'assets/styles.css';
+                link.setAttribute('data-ou-styles', '');
+                document.head.appendChild(link);
+            }
+            function add(js) {
+                if (document.querySelector('script[src$="/' + js + '"]')) return;
+                var s = document.createElement('script');
+                s.defer = true;
+                s.src = prefix + 'assets/' + js;
+                document.head.appendChild(s);
+            }
+            add('manifest.js');
+            add('script.js');
+            add('content.js');
+        })();
+    </script>
+</head>
+
+<body>
+    <h1>Questions</h1>
+    <h2>3.1 Wireless Networks</h2>
+    <ol>
+        <li>What are the main types of wireless networks used by mobile devices?</li>
+        <li>What are the advantages and disadvantages of Wi-Fi networks?</li>
+        <li>What are the advantages and disadvantages of cellular networks (e.g., 4G, 5G)?</li>
+        <li>What are the advantages and disadvantages of Bluetooth networks?</li>
+        <li>What is the difference between a hotspot and a standard Wi-Fi network?</li>
+        <li>Which type of wireless network is typically used for short-range communication between devices?</li>
+        <li>Which type of wireless network provides the widest coverage area?</li>
+        <li>Which type of wireless network is most commonly used for internet access on smartphones?</li>
+        <li>What is a common security protocol used to protect Wi-Fi networks?</li>
+        <li>Which of the following is a lower power, shorter range wireless technology that is intended to replace?
+            Wired connectivity. For accessories such as speakers and a mouse. </li>
+        <li>Which of the following is a wireless communication technology that enables a smartphone to communicate with
+            a payment system within a few CM away? </li>
+        </li>
+    </ol>
+
+
+    <h2>Summary Questions</h2>
+    <ol>
+
+    </ol>
+    </li>
+</body>
+
+</html>
