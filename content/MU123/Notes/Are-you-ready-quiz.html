@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Are you ready for the quiz?</title>
+    <meta name="description" content="Introduction to clients and servers in networking." />
+    <script>document.documentElement.setAttribute('data-theme', 'TM129');</script>
+    <link rel="stylesheet" href="../../../../assets/styles.css" />
+    <script>
+        (function () {
+            var path = location.pathname.replace(/\\/g, '/');
+            var idx = path.indexOf('/content/');
+            var prefix = '';
+            if (idx !== -1) {
+                var after = path.slice(idx + '/content/'.length);
+                var depth = (after.match(/\//g) || []).length;
+                prefix = '../'.repeat(depth + 1);
+            }
+            if (!document.querySelector('link[data-ou-styles]')) {
+                var link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = prefix + 'assets/styles.css';
+                link.setAttribute('data-ou-styles', '');
+                document.head.appendChild(link);
+            }
+            function add(js) {
+                if (document.querySelector('script[src$="/' + js + '"]')) return;
+                var s = document.createElement('script');
+                s.defer = true;
+                s.src = prefix + 'assets/' + js;
+                document.head.appendChild(s);
+            }
+            add('manifest.js');
+            add('script.js');
+            add('content.js');
+        })();
+    </script>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>Are you ready for the quiz?</h1>
+        </header>
+        <section aria-labelledby="quiz-intro">
+            <h2 id="quiz-intro">Quiz Introduction</h2>
+            <p>This quiz will test your understanding of the concepts covered in the previous sections. Make sure to
+                review your notes and materials before starting.</p>
+            <p>Good luck!</p>
+        </section>
+        <section aria-labelledby="quiz">
+            <h2 id="quiz">Quiz</h2>
+            <p>Question 1: If the temperature at 2 am on Wednesday is −5◦ and 12 hours later it is 3◦C, by how many
+                degrees has the temperature risen?</p>
+            <p>Answer: The temperature has risen by 8 degrees.</p>
+            <p>Question 2: You are considering buying carpet tiles for a room you are decorating. In which of the
+                following sizes are the tiles likely to be available? Give a reason for your choice?</p>
+            <p>Answer: The tiles are likely to be available in standard sizes such as 3m by 3m. These sizes are common
+                in the industry and provide flexibility for various room layouts.</p>
+            <p>Question 3: What is the result of (−2) × (−1.5)?</p>
+            <p>Answer: The result is 3.</p>
+            <p>Question 4: 2 5+3 4</p>
+            <p>Answer: = 2/5 + 3/4
+                = 8/20 + 15/20
+                = 23/20
+                = 1 3/20</p>
+            <p>Question 5: 2.13+(−5.74)</p>
+            <p>Answer: = 2.13 - 5.74
+                = -3.61</p>
+            <p>Question 6: (−27)÷3</p>
+            <p>Answer: = -9</p>
+            <p>Question 7: What is 5^2?</p>
+            <p>Answer: 5^2 = 25</p>
+            <p>Question 8: store is offering 15% off all electrical goods during its summer sale. What would you pay for
+                a
+                washing machine that usually costs £310?</p>
+            <p>To find the sale price, first calculate 15% of £310:</p>
+            <p>15% of £310 = 0.15 × £310 = £46.50</p>
+            <p>Now, subtract this discount from the original price:</p>
+            <p>Sale price = £310 - £46.50 = £263.50</p>
+            <p>Question 9: A family on holiday in Florida is considering buying a souvenir which is on sale for $22. If
+                the rate of exchange at the time is £1 = $1.42 approximately how much does the souvenir cost in pounds?
+            </p>
+            <p>To find the cost in pounds, divide the price in dollars by the exchange rate:</p>
+            <p>Cost in pounds = $22 ÷ $1.42 ≈ £15.49</p>
+            <p>Question 10: A garden is 7m x 5m and has a circular flower bed in the center. with a radius of 1.5m. . If
+                400
+                grams of grass seed covers 8 square metres, how much grass seed will be needed to re-seed the lawn? </p>
+            <p>First, calculate the area of the garden:</p>
+            <p>Area of garden = length × width = 7m × 5m = 35m²</p>
+            <p>Next, calculate the area of the circular flower bed using the formula A = πr²:</p>
+            <p>Area of flower bed = π × (1.5m)² = π × 2.25m² ≈ 7.07m²</p>
+            <p>Now, subtract the area of the flower bed from the area of the garden to find the area of the lawn:</p>
+            <p>Area of lawn = Area of garden - Area of flower bed = 35m² - 7.07m² ≈ 27.93m²</p>
+            <p>Finally, calculate the amount of grass seed needed:</p>
+            <p>Grass seed needed = (Area of lawn / Area covered by 400 grams) × 400 grams = (27.93m² / 8m²) × 400 grams
+                ≈ 1396.5 grams</p>
+            <p>So, approximately 1396.5 grams of grass seed will be needed to re-seed the lawn.</p>
+            <p>Question 11: A plan from a DIY booklet shows a shelf and its metal bracket. The shelf makes a right angle
+                with the
+                wall. The size of one of the angles is given (28°). What is the size of the other angle?</p>
+            <p>
+                Answer: Since the shelf makes a right angle with the wall, the two angles must add up to 90°. Therefore,
+                the
+                size of
+                the other angle can be calculated as follows:
+                <br /> Other angle = 90° - 28° = 62°
+                <br /> So, the size of the other angle is 62°.
+            </p>
+            </p>
+    </main>
+</body>
+
+</html>

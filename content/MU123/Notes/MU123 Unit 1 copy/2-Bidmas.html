@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <meta charset="UTF-8" />
+    <title>BIDMAS</title>
+<link rel="stylesheet" href="../../../../assets/styles.css"/>
+<script>
+(function(){
+  var path = location.pathname.replace(/\\/g,'/');
+  var idx  = path.indexOf('/content/');
+  var prefix = '';
+  if (idx !== -1) {
+    var after = path.slice(idx + '/content/'.length);
+    var depth = (after.match(/\//g) || []).length;
+    prefix = '../'.repeat(depth + 1);
+  }
+  if (!document.querySelector('link[data-ou-styles]')) {
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = prefix + 'assets/styles.css';
+    link.setAttribute('data-ou-styles','');
+    document.head.appendChild(link);
+  }
+  function add(js){
+    if (document.querySelector('script[src$="/'+js+'"]')) return;
+    var s = document.createElement('script');
+    s.defer = true;
+    s.src = prefix + 'assets/' + js;
+    document.head.appendChild(s);
+  }
+  add('manifest.js');
+  add('script.js');
+  add('content.js');
+})();
+</script>
+</head>
+<body>
+    <h1>BIDMAS</h1>
+    <p>BIDMAS is an acronym that helps remember the order of operations in mathematics:</p>
+    <ul>
+        <li>B - Brackets</li>
+        <li>I - Indices (or powers)</li>
+        <li>D - Division</li>
+        <li>M - Multiplication</li>
+        <li>A - Addition</li>
+        <li>S - Subtraction</li>
+    </ul>
+    <p>When solving mathematical expressions, operations should be performed in this order to ensure accurate results.</p>
+    <p>For example, in the expression <strong>3 + 4 ×   2</strong>, you would first perform the multiplication (4 × 2 = 8), and then the addition (3 + 8 = 11). If you were to perform the addition first, you would incorrectly calculate it as (3 + 4) × 2 = 14.</p>
+    <p>Understanding BIDMAS is crucial for solving complex mathematical problems and ensuring clarity in calculations.</p>
+    <h2>Exercises</h2>
+    <h3>Example 1:</h3>
+    <ol>
+        <li>8 - 2 + 5 - 1</li>
+            <ul>
+            <li>(addition and subtraction from left to right)</li>
+                <li>Step 1: 8 - 2 = 6</li>
+                <li>Step 2: 6 + 5 = 11</li>
+                <li>Step 3: 11 - 1 = 10</li>
+            </ul>
+        </li>
+        <li>5 + 12 / 4</li>
+            <ul>
+                <li>(division before addition)</li>
+                <li>Step 1: 12 / 4 = 3</li>
+                <li>Step 2: 5 + 3 = 8</li>
+            </ul>
+        </li>
+        <li>4 x 5<sup>2</sup><ul>   <li>(exponentiation before multiplication)</li>
+        <li>Step 1: 5<sup>2</sup> = 25</li>
+        <li>Step 2: 4 x 25 = 100</li><ul></li>
+        <li>(5-3)x4</li>
+            <ul>
+                <li>(brackets first)</li>
+                <li>Step 1: 5 - 3 = 2</li>
+                <li>Step 2: 2 x 4 = 8</li>
+            </ul>
+    </ol>
+    <h2>Activity 1:</h2>
+    <ol>
+        <li>9 + 7 - 2 - 4</li>
+            <ul>
+                <li>(addition and subtraction from left to right)</li>
+                <li>Step 1: 9 + 7 = 16</li>
+                <li>Step 2: 16 - 2 = 14</li>
+                <li>Step 3: 14 - 4 = 10</li>
+            </ul>
+        </li>
+        <li>2 x (7 - 4)</li>
+            <ul>
+                <li>(brackets first)</li>
+                <li>Step 1: (7 - 4) = 3</li>
+                <li>Step 2: 2 x 3 = 6</li>
+            </ul>
+        </li>
+        <li>(3+5)x3</li>
+            <ul>
+                <li>(brackets first)</li>
+                <li>Step 1: (3 + 5) = 8</li>
+                <li>Step 2: 8 x 3 = 24</li>
+            </ul>
+        </li>
+        <li>(3+4) x(2+3)</li>
+            <ul>
+                <li>(brackets first)</li>
+                <li>Step 1: (3 + 4) = 7</li>
+                <li>Step 2: (2 + 3) = 5</li>
+                <li>Step 3: 7 x 5 = 35</li>
+            </ul>
+        </li>
+        <li>3<sup>2</sup>+4<sup>3</sup>
+            <ul>
+                <li>(exponentiation before addition)</li>
+                <li>Step 1: 3<sup>2</sup> = 9</li>
+                <li>Step 2: 4<sup>3</sup> = 64</li>
+                <li>Step 3: 9 + 64 = 73</li>
+            </ul>
+        </li>
+    </ol>
+    <h2>Activity 2:</h2>
+    <ol>
+        <li>2 X 5 + 3 = 16</li>
+            <ul>
+                <li>(multiplication before addition)</li>
+                <li>2 X (5 + 3)</li>
+            </ul>
+        </li>
+       </ol> 
+       <li>3 + 4 x 7 = 49 <ul>
+            <li>(multiplication before addition)</li>
+            <li>3 + (4 x 7)</li>
+        </ul>
+       </li>
+       <li>1 +2 x 3 = 7</li>
+            <ul>
+                <li>(multiplication before addition)</li>
+                <li>1 + (2 x 3)</li>
+            </ul>
+        </li>
+
+        <li>9-3x2=3</li>
+            <ul>
+                <li>(multiplication before subtraction)</li>
+                <li>9 - (3 x 2)</li>
+            </ul>
+        </li>
+        <li>2x(3+3)x5=60</li>
+            <ul>
+                <li>(brackets first, then multiplication)</li>
+                <li>2 x (3 + 3) x 5</li>
+                <li>Step 1: (3 + 3) = 6</li>
+                <li>Step 2: 2 x 6 x 5 = 60</li>
+            </ul>
+    </ol>
+    <h2>Useful Links</h2>
+    <ul>
+        <li><a href="https://www.mathsisfun.com/algebra/operations-order-calculator.html">Math is Fun - BIDMAS</a></li>
+        <li><a href="https://www.khanacademy.org/math/cc-sixth-grade-math/x0267d782:cc-6th-exponents-and-order-of-operations">Khan Academy - Order of Operations</a></li>
+</body>
+</html>

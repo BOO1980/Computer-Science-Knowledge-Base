@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fractions</title>
+  <meta name="description" content="Introduction to clients and servers in networking." />
+  <script>document.documentElement.setAttribute('data-theme', 'TM129');</script>
+  <link rel="stylesheet" href="../../../../assets/styles.css" />
+  <script>
+    (function () {
+      var path = location.pathname.replace(/\\/g, '/');
+      var idx = path.indexOf('/content/');
+      var prefix = '';
+      if (idx !== -1) {
+        var after = path.slice(idx + '/content/'.length);
+        var depth = (after.match(/\//g) || []).length;
+        prefix = '../'.repeat(depth + 1);
+      }
+      if (!document.querySelector('link[data-ou-styles]')) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = prefix + 'assets/styles.css';
+        link.setAttribute('data-ou-styles', '');
+        document.head.appendChild(link);
+      }
+      function add(js) {
+        if (document.querySelector('script[src$="/' + js + '"]')) return;
+        var s = document.createElement('script');
+        s.defer = true;
+        s.src = prefix + 'assets/' + js;
+        document.head.appendChild(s);
+      }
+      add('manifest.js');
+      add('script.js');
+      add('content.js');
+    })();
+  </script>
+</head>
+
+<body>
+  <h1>
+    Fractions</h1>
+  <ul>
+    <li>A fraction is a way to represent a part of a whole.</li>
+    <li>The top number (numerator) represents how many parts we have.</li>
+    <li>The bottom number (denominator) represents how many equal parts the whole is divided into.</li>
+    <li>Fractions can be proper (numerator < denominator), improper (numerator> denominator), or mixed (a whole number
+        and a proper fraction).</li>
+    <li>Fractions can be added, subtracted, multiplied, and divided using specific rules.</li>
+  </ul>
+  <h2>Questions</h2>
+  <p>Question 1: 2 5+3 4</p>
+  <p>Answer: = 2/5 + 3/4
+    = 8/20 + 15/20
+    = 23/20
+    = 1 3/20</p>
+  <h2>Useful Links</h2>
+  <ul>
+    <li><a href="https://www.khanacademy.org/math/arithmetic/fraction-arithmetic" target="_blank" rel="noopener">Khan
+        Academy - Fraction Arithmetic</a></li>
+    <li><a href="https://www.mathsisfun.com/fractions.html" target="_blank" </ul>
+</body>
+
+</html>

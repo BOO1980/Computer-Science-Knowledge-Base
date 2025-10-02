@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rounding Numbers</title>
+    <meta name="description" content="Introduction to clients and servers in networking." />
+    <script>document.documentElement.setAttribute('data-theme', 'TM129');</script>
+    <link rel="stylesheet" href="../../../../assets/styles.css" />
+    <script>
+        (function () {
+            var path = location.pathname.replace(/\\/g, '/');
+            var idx = path.indexOf('/content/');
+            var prefix = '';
+            if (idx !== -1) {
+                var after = path.slice(idx + '/content/'.length);
+                var depth = (after.match(/\//g) || []).length;
+                prefix = '../'.repeat(depth + 1);
+            }
+            if (!document.querySelector('link[data-ou-styles]')) {
+                var link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = prefix + 'assets/styles.css';
+                link.setAttribute('data-ou-styles', '');
+                document.head.appendChild(link);
+            }
+            function add(js) {
+                if (document.querySelector('script[src$="/' + js + '"]')) return;
+                var s = document.createElement('script');
+                s.defer = true;
+                s.src = prefix + 'assets/' + js;
+                document.head.appendChild(s);
+            }
+            add('manifest.js');
+            add('script.js');
+            add('content.js');
+        })();
+    </script>
+</head>
+
+<body>
+    <h1>
+        Rounding Numbers</h1>
+    <ul>
+        <li>Rounding is the process of reducing the number of significant digits in a number.</li>
+        <li>Rounding is often used to make numbers easier to work with or to present them in a more concise format.</li>
+        <li>There are several methods of rounding, including rounding up, rounding down, and rounding to the nearest
+            integer.</li>
+        <li>Rounding up means increasing the number to the next highest integer, while rounding down means decreasing
+            the number to the next lowest integer.</li>
+        <li>Rounding to the nearest integer means rounding the number to the closest whole number.</li>
+        <li>When rounding to a specific number of decimal places, the digit in the place to the right of the desired
+            decimal place is used to determine whether to round up or down.</li>
+        <li>If the digit is 5 or greater, the number is rounded up. If the digit is less than 5, the number is rounded
+            down.</li>
+        <li>When you round a number, you just state how it's been rounded in brackets after the rounded number ie 0.32
+            (to 2 d.p)</li>
+    </ul>
+    <h2>Decimal Places</h2>
+    <ul>
+        <li>Decimal places refer to the number of digits to the right of the decimal point in a number.</li>
+        <li>For example, in the number 3.14159, there are five decimal places.</li>
+        <li>When rounding to a specific number of decimal places, it is important to consider
+            the context in which the number will be used.</li>
+        <li>For example, if a number is being used in a financial context, it may be appropriate to round to two decimal
+            places to represent cents.</li>
+        <li>In scientific contexts, it may be appropriate to round to a specific number of significant figures based on
+            the precision of the measurement.</li>
+        <li>It is also important to consider the potential impact of rounding on calculations and results.</li>
+        <li>Rounding can introduce errors into calculations, so it is important to use appropriate rounding methods and
+            to be aware of the potential impact on results.</li>
+    </ul>
+    <h2>Activity</h2>
+    <ol>
+        <li>Round 0.0582 to three decimal places: 0.058 (3.d.p)</li>
+        <li>Round 7.05683 to one decimal place: 7.1 (1.d.p)</li>
+        <li>Round 2.3971 to two decimal places: 2.40 (2.d.p)</li>
+        <li>Round 2.2364 to two decimal places: 2.24 (2.d.p)</li>
+        <li>Round 0.00547 to three decimal places: 0.005 (3.d.p)</li>
+        <li>Round 42.59817 to four decimal places: 42.5982 (4.d.p)</li>
+        <li>Round 7.98 to one decimal place: 8.0 (1.d.p) </li>
+
+    </ol>
+    <h2>Useful Links</h2>
+    <ul>
+
+    </ul>
+
+</body>
+
+</html>

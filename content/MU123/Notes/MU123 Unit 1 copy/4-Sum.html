@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <meta charset="UTF-8" />
+    <title>Sum</title>
+<link rel="stylesheet" href="../../../../assets/styles.css"/>
+<script>
+(function(){
+  var path = location.pathname.replace(/\\/g,'/');
+  var idx  = path.indexOf('/content/');
+  var prefix = '';
+  if (idx !== -1) {
+    var after = path.slice(idx + '/content/'.length);
+    var depth = (after.match(/\//g) || []).length;
+    prefix = '../'.repeat(depth + 1);
+  }
+  if (!document.querySelector('link[data-ou-styles]')) {
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = prefix + 'assets/styles.css';
+    link.setAttribute('data-ou-styles','');
+    document.head.appendChild(link);
+  }
+  function add(js){
+    if (document.querySelector('script[src$="/'+js+'"]')) return;
+    var s = document.createElement('script');
+    s.defer = true;
+    s.src = prefix + 'assets/' + js;
+    document.head.appendChild(s);
+  }
+  add('manifest.js');
+  add('script.js');
+  add('content.js');
+})();
+</script>
+</head>
+<body>
+    <h1>Sum</h1>
+    <p>The sum is the result of adding two or more numbers.</p>
+    <h2>Examples</h2>
+    <ul>
+        <li>Example 1: 2 + 3 = 5</li>
+        <li>Example 2: 10 + 15 + 5 = 30</li>
+    </ul>
+    <h2>Actvity</h2>
+    <p>To practice finding sums, try the following exercises:</p>
+    <ol><li>Two numbers with sum 12 and product 32
+    <ul>
+    <li>8 and 4</li></ul></li>
+    </ol>
+    <p>Try to find the sum of the following numbers:</p>
+    <ul>
+        <li><a href="https://www.khanacademy.org/math/cc-2nd-grade-math/cc-2nd-add-subtract-100/cc-2nd-math-strategies-for-adding-within-100/e/select-strategies-for-adding-within-100">Khan Academy - Strategies for Adding within 100</a></li>
+            <li><a href="https://www.mathsisfun.com/numbers/addition.html">Math is Fun - Addition</a></li>
+            <li><a href="https://www.khanacademy.org/math/cc-3rd-grade-math/cc-3rd-add-subtract-1000/cc-3rd-addition-within-1000/e/addition-within-1000">Khan Academy - Addition within 1000</a></li>
+    <li><a href="https://www.open.edu/openlearn/science-maths-technology/mathematics-statistics/numbers-units-and-arithmetic">Open University - Numbers, Units and Arithmetic</a></li>
+
+    </ul>
+</body>
+</html>
