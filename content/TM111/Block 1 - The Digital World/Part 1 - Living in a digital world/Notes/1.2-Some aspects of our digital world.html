@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta charset="UTF-8" />
+  <title>1.2 Some aspects of our digital world</title>
+  <link rel="stylesheet" href="../../../../../assets/styles.css" />
+  <script>
+    (function () {
+      var path = location.pathname.replace(/\\/g, '/');
+      var idx = path.indexOf('/content/');
+      var prefix = '';
+      if (idx !== -1) {
+        var after = path.slice(idx + '/content/'.length);
+        var depth = (after.match(/\//g) || []).length;
+        prefix = '../'.repeat(depth + 1);
+      }
+      if (!document.querySelector('link[data-ou-styles]')) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = prefix + 'assets/styles.css';
+        link.setAttribute('data-ou-styles', '');
+        document.head.appendChild(link);
+      }
+      function add(js) {
+        if (document.querySelector('script[src$="/' + js + '"]')) return;
+        var s = document.createElement('script');
+        s.defer = true;
+        s.src = prefix + 'assets/' + js;
+        document.head.appendChild(s);
+      }
+      add('manifest.js');
+      add('script.js');
+      add('content.js');
+    })();
+  </script>
+</head>
+
+<body>
+  <h1>1.2 Some aspects of our digital world</h1>
+</body>
+<ul>
+  <li>will look at how it affects business,
+    information, entertainment, public services and communication</li>
+  <li>
+</ul>
+<h2>1.2.1 Business</h2>
+<ul>
+  <li>Every time you use a debit or credit card in a shop, the shop till communicates with a card
+    terminal that transmits your identification details from your card to your bank or credit card
+    company for verification.</li>
+  <li>Your balance is then adjusted according to your purchase. A
+    similar chain of events is initiated if you shop online (buying a plane or train ticket,
+    perhaps) or over the phone (when buying a cinema ticket, for example).</li>
+  <li>Many banks also provide online banking services, reducing the need for customers to visit a branch.</li>
+  <li>Automated teller machines (ATMs) allow you to check your bank balance and withdraw
+    cash wherever you are in the world.</li>
+  <li>In each of the above situations – using a debit or
+    credit card, shopping or managing your money online or over the phone, or using an ATM
+    – the machines involved are connected via a network to a central computer which has
+    records of your account in an electronic filing system known as a database</li>
+  <li>Financial services have undergone huge changes in recent years as a result of
+    developments in the digital technologies driving them.</li>
+  <li>The examples just described show
+    how convenient and accessible such services have become. Yet at the same time, issues
+    of identity and security have become a concern</li>
+  <li>New online ways of communicating have
+    also created new types of crime, including identity theft and digital financial fraud. In turn,
+    these problems have fostered the development of new security industries that try to inform
+    us and sell us solutions to reduce the chances of us becoming victims of online crime.</li>
+  <li>Also, this move towards online services means that banks have closed many branches,
+    leading to job losses.</li>
+  <li>This is particularly difficult for customers who prefer to use
+    branches, especially those living in rural areas.</li>
+</ul>
+<h2>1.2.2 Commerce</h2>
+<ul>
+  <li>Advances in digital technologies have led to changes in many areas of commerce, with
+    some existing kinds of business being transformed by the opportunities these
+    developments offer</li>
+  <li>One of the most obvious changes is the emergence of retailers such
+    as Amazon, which at one stage was entirely online with no physical shop that customers
+    can visit</li>
+  <li>Yet the internet not only benefits the largest companies, but also allows even the
+    smallest retailers to advertise their services to a global audience</li>
+  <li>Specialised companies
+    can flourish by harnessing the internet’s immense reach to deliver to potential customers</li>
+  <li>High-street shops specialising in items such as books, DVDs, music
+    and games have all lost business to online retailers</li>
+  <li>This has driven some shops out of
+    business, but a number of them have also opened successful online stores.</li>
+  <li>Online
+    retailers have lower costs – they don’t pay expensive high-street rents and can easily be
+    based in countries with low tax regimes – and they can pass these savings on to
+    customers</li>
+  <li>There are other concerns about these large online retailers, such as the
+    employment terms and conditions of warehouse workers</li>
+  <li>Although the low costs offered by online stores can be very attractive to customers, they
+    might be counterbalanced to some extent by the less immediate and less tangible nature
+    of the shopping experience</li>
+  <li>owever, online retailers try to make up for this by providing a
+    variety of services that reassure and inform their customers. One such service is the
+    tracking of goods online</li>
+  <li>This allows customers to see where their order is in the delivery process and
+    when it is likely to arrive</li>
+
+</ul>
+<h3>Activity 1.5</h3>
+<p>Add some more entries to the following table of advantages and disadvantages of
+  online shopping. Can you think of ways in which online retailers may try to address the
+  disadvantages?
+</p>
+<p>Answer: When shopping online you cannot really see/feel the quality of the product before buying it. Online retailers
+  may try to address this by providing detailed product descriptions, high-quality images, and customer reviews to help
+  shoppers make informed decisions.</p>
+
+</html>

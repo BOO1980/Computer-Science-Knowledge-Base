@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta charset="UTF-8" />
+  <title>Activity 1.2</title>
+  <link rel="stylesheet" href="../../../../../assets/styles.css" />
+  <script>
+    (function () {
+      var path = location.pathname.replace(/\\/g, '/');
+      var idx = path.indexOf('/content/');
+      var prefix = '';
+      if (idx !== -1) {
+        var after = path.slice(idx + '/content/'.length);
+        var depth = (after.match(/\//g) || []).length;
+        prefix = '../'.repeat(depth + 1);
+      }
+      if (!document.querySelector('link[data-ou-styles]')) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = prefix + 'assets/styles.css';
+        link.setAttribute('data-ou-styles', '');
+        document.head.appendChild(link);
+      }
+      function add(js) {
+        if (document.querySelector('script[src$="/' + js + '"]')) return;
+        var s = document.createElement('script');
+        s.defer = true;
+        s.src = prefix + 'assets/' + js;
+        document.head.appendChild(s);
+      }
+      add('manifest.js');
+      add('script.js');
+      add('content.js');
+    })();
+  </script>
+</head>
+
+<body>
+  <h1>1.2.1 - An Introduction to generative AI</h1>
+  <h2>Examples of AI in everyday life</h2>
+  <ul>
+    <li>Lots of us have been interacting with AI in various ways for years (sometimes without realising it). </li>
+    <li>Examples of AI in everyday life <ul>
+        <li>Digital assistants (e.g., Siri, Alexa)</li>
+        <li>Recommendation systems (e.g., Netflix, Amazon)</li>
+        <li>Chatbots: used for customer service (shopping, banking, booking a holiday, tech support)</li>
+        <li>Facial recognition technology (e.g., unlocking phones, security systems)</li>
+        <li>Music and Media streaming services: (e.g., Spotify, Apple Music) Use AI to recommend songs and create
+          playlists.</li>
+        <li>Online shopping: personalized product recommendations</li>
+        <li>Travel and navigation: (e.g., Google Maps, Waze) Use AI to provide real-time traffic updates and suggest
+          the best routes.</li>
+        <li>Writing assistance: (e.g., Grammarly, Google Docs) Use AI to help with grammar, style, and content
+          suggestions.</li>
+        <li>Health and Fitness apps: (e.g., MyFitnessPal, Fitbit) Use AI to provide personalized workout and nutrition
+          recommendations.</li>
+        <li>Social media feeds: Use AI to curate content and suggest posts based on user preferences.</li>
+      </ul>
+    </li>
+  </ul>
+  <h2>What is generative AI?</h2>
+  <ul>
+    <li>Generative AI refers to a type of artificial intelligence that can create new content, such as text, images,
+      music, or even videos, based on the data it has been trained on.</li>
+    <li>Unlike traditional AI systems that are designed to perform specific tasks, generative AI models can generate
+      original content that mimics human creativity.</li>
+    <li>Generative AI uses techniques such as deep learning and neural networks to analyze large datasets and learn
+      patterns, structures, and relationships within the data.</li>
+    <li>Once trained, these models can produce new content by sampling from the learned patterns and generating outputs
+      that are similar to the training data but not identical.</li>
+    <li>Examples of generative AI include language models like GPT-3 (which powers ChatGPT), image generation models
+      like DALL-E, and music generation models like OpenAI's MuseNet.</li>
+    <li>It is a type of AI technology that automatically generates (or creates) content in response to prompts given to
+      it by users</li>
+  </ul>
+  <h2>How does it work</h2>
+  <ul>
+    <li>Generative AI works by training on large datasets to learn patterns and structures within the data.</li>
+    <li>LLMs have been trained on vast amounts of data from webpages, social media conversations, and other online
+      content to generate human-like responses to our prompts. These tools can continuously update with new data by
+      collecting our previous questions and prompts.</li>
+    <li>Generative AI tools that deal with text are called Large language models (LLMs).</li>
+    <li>LLMs are designed to understand and generate human-like text based on the input they receive.</li>
+    <li>LLMs such as ChatGPT work like predictive text, except the algorithms are more sophisticated. </li>
+    <li>They create content based on recognized patterns. e.g what word or phrase is most likely to come next, rather
+      than knowing what the words or phrases mean.</li>
+    <li>You can provide these tools with a prompt about almost any topic and they will respond in fluent English as well
+      as many other languages, often sounding surprisingly knowledgeable, or with an image/computing code snippet.</li>
+    <li>Although outputs produced by Generative AI tool look plausible, they are often misleading, made up or maybe
+      entirely wrong.</li>
+    <li>Each response is unique, you will never get the same reply twice</li>
+
+    <li>Responses are conversationbal, once you have asked a question you can just carry on the conversation by adding
+      new questions or prompts, rather than having to redo your search, as you would in a search engine like google</li>
+  </ul>
+  <h2>Questions</h2>
+  <ul>
+    <li>What is generative AI? AI that creates content based on user prompts.</li>
+    <li>Which of the following is a text generative AI tool? ChatGPT</li>
+    <li>Which of the following is an example of AI Technology used in everyday life? Using a chatbot for customer
+      service.</li>
+    <li>Why might responses from generative AI tools be misleading? Because they rely on pattern recognitions rather
+      than understanding context.</li>
+    <li>How do Large Language Models (LLMs) generate responses? By recongnizing patterns in vast amounts of data</li>
+  </ul>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta charset="UTF-8" />
+    <title>1.2.1 - My Digital Identity</title>
+    <link rel="stylesheet" href="../../../../../assets/styles.css" />
+    <script>
+        (function () {
+            var path = location.pathname.replace(/\\/g, '/');
+            var idx = path.indexOf('/content/');
+            var prefix = '';
+            if (idx !== -1) {
+                var after = path.slice(idx + '/content/'.length);
+                var depth = (after.match(/\//g) || []).length;
+                prefix = '../'.repeat(depth + 1);
+            }
+            if (!document.querySelector('link[data-ou-styles]')) {
+                var link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = prefix + 'assets/styles.css';
+                link.setAttribute('data-ou-styles', '');
+                document.head.appendChild(link);
+            }
+            function add(js) {
+                if (document.querySelector('script[src$="/' + js + '"]')) return;
+                var s = document.createElement('script');
+                s.defer = true;
+                s.src = prefix + 'assets/' + js;
+                document.head.appendChild(s);
+            }
+            add('manifest.js');
+            add('script.js');
+            add('content.js');
+        })();
+    </script>
+</head>
+
+<body>
+    <h1>1.2.1 - My Digital Identity</h1>
+    <h2>Introduction</h2>
+    <ul>
+        <li>
+            Do you use social media to connect with others, to share posts, photos, and videos, or to stay informed
+            about current events?
+        </li>
+        <li>Have you considered how you posts project a particular image of yourself when you communicate with others
+        </li>
+
+    </ul>
+    <h2>Whos reading my posts?</h2>
+    <ul>
+        <li>Friends and family</li>
+        <li>Colleagues and professional contacts</li>
+        <li>Followers and fans</li>
+        <li>Potential employers or clients</li>
+    </ul>
+    <h2>Summary</h2>
+    <ul>
+        <li>Your digital identity is shaped by your online interactions and the content you share.</li>
+        <li>Be mindful of who can see your posts and how they may interpret them.</li>
+        <li>Regularly review your privacy settings on social media platforms.</li>
+    </ul>
+    <h2>Questions</h2>
+
+    <h2>Useful Websites</h2>
+    <ul>
+        <li>
+            <a href="https://www.privacytools.io/" target="_blank">PrivacyTools</a> - A resource for online privacy and
+            security.
+        </li>
+        <li>
+            <a href="https://www.eff.org/" target="_blank">Electronic Frontier Foundation (EFF)</a> - An organization
+            defending civil liberties in the digital world.
+        </li>
+        <li>
+            <a href="https://www.commonsensemedia.org/" target="_blank">Common Sense Media</a> - A resource for parents
+            and educators on digital citizenship and media literacy.
+        </li>
+        <li><a href="https://www.yahoo.com/news/daily-digit-looking-job-careful-post-social-media-162030047.html"
+                target="_blank">Yahoo News</a> - An article discussing the impact of social media posts on job searches.
+        </li>
+        <li><a href="https://www.bbc.co.uk/news/entertainment-arts-52976556" target="_blank">BBC News</a> - Hartley
+            Sawyer: The Flash actor fired over offensive tweets
+            .</li>
+    </ul>
+
+</html>

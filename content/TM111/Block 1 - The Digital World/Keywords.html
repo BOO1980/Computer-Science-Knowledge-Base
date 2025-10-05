@@ -1,61 +1,100 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    <meta charset="UTF-8" />
-    <title>TM111 Keywords</title>
-<link rel="stylesheet" href="../../../assets/styles.css"/>
-<script>
-(function(){
-  var path = location.pathname.replace(/\\/g,'/');
-  var idx  = path.indexOf('/content/');
-  var prefix = '';
-  if (idx !== -1) {
-    var after = path.slice(idx + '/content/'.length);
-    var depth = (after.match(/\//g) || []).length;
-    prefix = '../'.repeat(depth + 1);
-  }
-  if (!document.querySelector('link[data-ou-styles]')) {
-    var link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = prefix + 'assets/styles.css';
-    link.setAttribute('data-ou-styles','');
-    document.head.appendChild(link);
-  }
-  function add(js){
-    if (document.querySelector('script[src$="/'+js+'"]')) return;
-    var s = document.createElement('script');
-    s.defer = true;
-    s.src = prefix + 'assets/' + js;
-    document.head.appendChild(s);
-  }
-  add('manifest.js');
-  add('script.js');
-  add('content.js');
-})();
-</script>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta charset="UTF-8" />
+  <title>TM111 Keywords</title>
+  <link rel="stylesheet" href="../../../assets/styles.css" />
+  <script>
+    (function () {
+      var path = location.pathname.replace(/\\/g, '/');
+      var idx = path.indexOf('/content/');
+      var prefix = '';
+      if (idx !== -1) {
+        var after = path.slice(idx + '/content/'.length);
+        var depth = (after.match(/\//g) || []).length;
+        prefix = '../'.repeat(depth + 1);
+      }
+      if (!document.querySelector('link[data-ou-styles]')) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = prefix + 'assets/styles.css';
+        link.setAttribute('data-ou-styles', '');
+        document.head.appendChild(link);
+      }
+      function add(js) {
+        if (document.querySelector('script[src$="/' + js + '"]')) return;
+        var s = document.createElement('script');
+        s.defer = true;
+        s.src = prefix + 'assets/' + js;
+        document.head.appendChild(s);
+      }
+      add('manifest.js');
+      add('script.js');
+      add('content.js');
+    })();
+  </script>
 </head>
+
 <body>
-    <h1>Keywords</h1>
-    <p>This page contains keywords related to the TM111 module.</p>
-    <h2>Block 1: The Digital World</h2>
-    <h3>Part 1: Living in a Digital World</h3>
-    <ul>
-        <li><strong>Digital Technologies</strong>: Tools and systems that generate, store, and process data.</li>
-        <li><strong>Digital World</strong>: The environment created by digital technologies and their impact on society.</li>
-        <li><strong>Information Society</strong>: A society where the creation, distribution, and manipulation of information is a significant economic, political, and cultural activity.</li>
-        <li><strong>Internet</strong>: A global network of interconnected computers and servers that communicate using standardized protocols.</li>
-        <li><strong>Internetwork</strong>: A collection of interconnected networks that communicate with each other using standardized protocols.</li>
-        <li><strong>Networks</strong>: Systems of interconnected computers and devices that communicate with each other.</li>
-        <li><strong>Ubiquity</strong>: The state of being everywhere at once, often used to describe the pervasive nature of digital technologies.</li>
-        <li><strong>Smart Devices</strong>: Objects that incorporate computer technologies and can communicate with other devices over the internet.</li>
-        <li><strong>Subscriber Trunk Dialling (STD)</strong>: A system introduced in the UK in 1959 that allowed users to dial long-distance calls without going through an operator.</li>
-        <li><strong>Ubiquitous Computing</strong>: The integration of computing into everyday objects and environments, making technology seamlessly available.</li>
-        <li><strong>World Wide Web</strong>: A system of interlinked hypertext documents accessed via the internet, allowing users to view and interact with content.</li>
-        <li><strong>Convergence</strong>: The process by which previously distinct technologies and industries become more closely integrated and interdependent.</li>
-        
-        
-    </ul>
+  <h1>Keywords</h1>
+  <p>This page contains keywords related to the TM111 module.</p>
+  <h2>Block 1: The Digital World</h2>
+  <h3>Part 1: Living in a Digital World</h3>
+  <ul>
+    <li><strong>Digital Technologies</strong>: Tools and systems that generate, store, and process data.</li>
+    <li><strong>Digital World</strong>: The environment created by digital technologies and their impact on society.
+    </li>
+    <li><strong>Information Society</strong>: A society where the creation, distribution, and manipulation of
+      information is a significant economic, political, and cultural activity.</li>
+    <li><strong>Internet</strong>: A global network of interconnected computers and servers that communicate using
+      standardized protocols.</li>
+    <li><strong>Internetwork</strong>: A collection of interconnected networks that communicate with each other using
+      standardized protocols.</li>
+    <li><strong>Networks</strong>: Systems of interconnected computers and devices that communicate with each other.
+    </li>
+    <li><strong>Ubiquity</strong>: The state of being everywhere at once, often used to describe the pervasive nature of
+      digital technologies.</li>
+    <li><strong>Smart Devices</strong>: Objects that incorporate computer technologies and can communicate with other
+      devices over the internet.</li>
+    <li><strong>Subscriber Trunk Dialling (STD)</strong>: A system introduced in the UK in 1959 that allowed users to
+      dial long-distance calls without going through an operator.</li>
+    <li><strong>Ubiquitous Computing</strong>: The integration of computing into everyday objects and environments,
+      making technology seamlessly available.</li>
+    <li><strong>World Wide Web</strong>: A system of interlinked hypertext documents accessed via the internet, allowing
+      users to view and interact with content.</li>
+    <li><strong>Convergence</strong>: The process by which previously distinct technologies and industries become more
+      closely integrated and interdependent.</li>
+    <li><strong>Generative AI</strong>: A type of artificial intelligence that can create new content based on the data
+      it has been trained on.</li>
+    <li><strong>Prompt</strong>: A text input given to a generative AI model to elicit a specific response or generate
+      content.</li>
+    <li><strong>Chatbots</strong>: AI systems that can engage in conversation with users, often used for customer
+      support or information retrieval.</li>
+    <li><strong>Chat GPT-3</strong>: A state-of-the-art language processing AI model developed by OpenAI, capable of
+      generating human-like text based on given prompts.</li>
+    <li><strong>DALL-E2</strong>: An AI model developed by OpenAI that generates images from textual descriptions.</li>
+    <li><strong>Large Language Models (LLMs)</strong>: A type of generative AI model specifically designed to understand
+      and generate human-like text.</li>
+    <li><strong>Information Society</strong>: A society where the creation, distribution, and manipulation of
+      information is a significant economic, political, and cultural activity.</li>
+    <li><strong>Network Society</strong>: A social structure made up of networks powered by digital communication
+      technologies.</li>
+    <li><strong>Knowledge Society</strong>: A society where knowledge is created, shared, and utilized to drive
+      economic and social development.</li>
+    <li><strong>Digital Divide</strong>: The gap between individuals who have access to digital technologies and those
+      who do not.</li>
+    <li><strong>SMS (Short Message Service)</strong>: A text messaging service that allows users to send and receive
+      short text messages on mobile devices.</li>
+    <li><strong>Instant Messaging (IM)</strong>: A real-time text-based communication service that allows users to
+      exchange messages over the internet.</li>
+    <li><strong>ATMs (Automated Teller Machines)</strong>: Electronic banking outlets that allow customers to complete
+      basic transactions without the need for a human teller.</li>
+    <li><strong>Database</strong>: An organized collection of data that can be easily accessed, managed, and updated.
+    </li>
+  </ul>
 </body>
+
 </html>
