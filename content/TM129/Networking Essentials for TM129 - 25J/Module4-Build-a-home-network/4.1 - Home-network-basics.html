@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4.1 - Home Network Basics</title>
+  <meta name="description" content="Introduction to wireless networks." />
+  <script>document.documentElement.setAttribute('data-theme', 'TM129');</script>
+  <link rel="stylesheet" href="../../../../assets/styles.css" />
+  <script>
+    (function () {
+      var path = location.pathname.replace(/\\/g, '/');
+      var idx = path.indexOf('/content/');
+      var prefix = '';
+      if (idx !== -1) {
+        var after = path.slice(idx + '/content/'.length);
+        var depth = (after.match(/\//g) || []).length;
+        prefix = '../'.repeat(depth + 1);
+      }
+      if (!document.querySelector('link[data-ou-styles]')) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = prefix + 'assets/styles.css';
+        link.setAttribute('data-ou-styles', '');
+        document.head.appendChild(link);
+      }
+      function add(js) {
+        if (document.querySelector('script[src$="/' + js + '"]')) return;
+        var s = document.createElement('script');
+        s.defer = true;
+        s.src = prefix + 'assets/' + js;
+        document.head.appendChild(s);
+      }
+      add('manifest.js');
+      add('script.js');
+      add('content.js');
+    })();
+  </script>
+</head>
+
+<body>
+  <main>
+    <header>
+      <h1>4.1 – Home Network Basics</h1>
+    </header>
+
+    <section aria-labelledby="typical-home-network-setup">
+      <h2 id="typical-home-network-setup">4.1.1 Video — Typical Home Network Setup</h2>
+      <ul>
+        <li>Most home networks consist of at least two separate networks</li>
+        <li>The first network is the public network that is coming in from the service provider, usually a cable or DSL
+          connection.</li>
+        <li>The DSL provider or cable provider network does not use the same protocols and transmission methods as does
+          an ethernet network</li>
+        <li>So one thing you are going to see in almost every home network is a modem</li>
+        <li>The modem converts the signals coming from the provider network</li>
+        <li>The modem has an input for the Coaxial cable and it also has an output port that goes to the local network
+        </li>
+        <li>Almost all home networking devices provide wireless connectivity</li>
+        <li>Modems will have internet port and LAN connectivity ports, these ports are usually switched ports</li>
+        <li>LAN ports are used to connect devices within the local network</li>
+        <li>WAN ports are used to connect to the internet</li>
+        <li>Most modems have built in wireless access point called a Router</li>
+        <li>The reason why they are called routers is that the ports are separated into two separate networks</li>
+        <li>The first network is called the local network, which can be wired (plug into an Ethernet port) or wireless
+          (connect via Wi-Fi).</li>
+        <li>The second network is the wide area network (WAN), which connects to the internet.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="components-of-a-home-network">
+      <h2 id="components-of-a-home-network">4.1.2 - Components of a Home Network</h2>
+      <ul>Below.
+        <li>Smartphones have multiple radios, transmitters and receivers to do the talking.In addition to an integrated
+          router, there are many different types of devices that might be connecting to a home network :
+          <ul>
+            <li>Desktop computers. </li>
+            <li>Gaming systems. </li>
+            <li>Smart TV systems.</li>
+            <li>Printers. </li>
+            <li>Scanners. </li>
+            <li>Security cameras. </li>
+            <li>climate control devices. </li>
+          </ul>
+        </li>
+
+    </section>
+
+
+  </main>
+</body>
+
+</html>
