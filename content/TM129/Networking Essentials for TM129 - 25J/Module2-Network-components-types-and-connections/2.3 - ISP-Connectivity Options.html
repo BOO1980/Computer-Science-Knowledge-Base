@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2.3 ISP connectivity options. </title>
+  <meta name="description" content="Introduction to clients and servers in networking." />
+  <script>document.documentElement.setAttribute('data-theme', 'TM129');</script>
+  <link rel="stylesheet" href="../../../../assets/styles.css" />
+  <script>
+    (function () {
+      var path = location.pathname.replace(/\\/g, '/');
+      var idx = path.indexOf('/content/');
+      var prefix = '';
+      if (idx !== -1) {
+        var after = path.slice(idx + '/content/'.length);
+        var depth = (after.match(/\//g) || []).length;
+        prefix = '../'.repeat(depth + 1);
+      }
+      if (!document.querySelector('link[data-ou-styles]')) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = prefix + 'assets/styles.css';
+        link.setAttribute('data-ou-styles', '');
+        document.head.appendChild(link);
+      }
+      function add(js) {
+        if (document.querySelector('script[src$="/' + js + '"]')) return;
+        var s = document.createElement('script');
+        s.defer = true;
+        s.src = prefix + 'assets/' + js;
+        document.head.appendChild(s);
+      }
+      add('manifest.js');
+      add('script.js');
+      add('content.js');
+    })();
+  </script>
+</head>
+
+<body>
+  <main>
+    <header>
+      <h1>2.3 – ISP Connectivity Options</h1>
+    </header>
+
+    <section aria-labelledby="isp-services">
+      <h2 id="isp-services">2.3.1 - ISP Services</h2>
+      <ul>
+        <li>
+          An Internet service Provider (ISP) provides a link between the home network and the Internet.
+        </li>
+        <li>An ISP can be the local cable provider, a landline telephone service provider, the cellular network to
+          provide you smartphone services, or an independent provider who leases bandwidth on a physical network
+          infrastructure of another company. </li>
+        <li>Many ISPs also offer additional services to their contract subscribers. </li>
+        <li>These services can include email accounts, network storage and website hosting, and
+        <li>ISPs are connected in a hierarchical manner that ensures that Internet traffic generally takes the shortest
+          path from the source to the destination. </li>
+        <li>ISPs are critical to communications across the global Internet. </li>
+        <li>The Internet backbone is like an information superhighway that provides high speed data links to connect the
+          various service provider networks in major metropolitan areas around the world. </li>
+        <li>The primary medium that connects the Internet backbone is fiber optic cable. This cable is typically
+          installed underground to connect cities within continents. </li>
+        <li>Fiber optic cables also run under the sea to connect continents, countries and cities. </li>
+      </ul>
+      <img src="./graphics/ISP-Services.png" alt="ISP Services" />
+    </section>
+
+    <section aria-labelledby="isp-connections">
+      <h2 id="isp-connections">2.3.2 - ISP Connections</h2>
+      <ul>
+
+        <li>The interconnection of ISPs that forms the backbone of the Internet is a complex web of fiber optic cables
+          with expensive networking switches and routers that direct the flow of information between source and
+          destination hosts. </li>
+        <li>Average home users are not aware of the infrastructure outside of their network. </li>
+        <li>For a home user, connecting to the ISP is a fairly uncomplicated process. </li>
+        <li>The simplest ISP connection consists of a modem that provides a direct connection between a computer and the
+          ISP. </li>
+        <li>A router is required to securely connect a computer to an ISP. </li>
+        <li>The most common connection option consists of using a wireless integrated router to connect to the ISP. The
+          router includes a switch to connect wired hosts and a Wireless AP to connect wireless hosts. </li>
+        <li>The router also provides client IP addressing information and security for inside hosts. </li>
+      </ul>
+      <img src="./graphics/ISP-Connection.png" alt="ISP Connections" />
+    </section>
+
+    <section aria-labelledby="cable-and-dsl-connections">
+      <h2 id="cable-and-dsl-connections">2.3.3 Cable and DSL Connections</h2>
+      <ul>
+        <li>Most home users. Do not connect to their service providers with fiber optic cables. </li>
+        <li>One of the most common methods is cable. <ul>
+            <li>Cable Typically offered by cable television service providers, the Internet data signal is carried on
+              the same coaxial cable that delivers cable television. </li>
+            <li>It provides a high bandwidth always on connection to the Internet. </li>
+            <li>A special cable modem separates the Internet data signal from the other signals carried on the cable and
+              provides Ethernet connection to a host computer or LAN. </li>
+          </ul>
+        </li>
+        <li>Another common method is DSL (Digital Subscriber Line). <ul>
+            <li>The digital subscriber line provides a high bandwidth or a zone connection to the Internet. </li>
+            <li>It requires a special high speed modem that separates the DSL signal from the telephone signal and
+              provides it Ethernet connection to a host computer or LAN. </li>
+            <li>DSL runs over a telephone line, with the line split into three channels. <ul>
+                <li>One channel is used for voice telephone calls. This channel allows an individual to receive phone
+                  calls without disconnecting from the Internet. </li>
+                <li>>A second channel is a faster download channel used to receive information from the Internet.</li>
+                <li>A third channel is used for sending or uploading information. This channel is usually slightly
+                  slower than the download channel. </li>
+              </ul>
+            </li>
+            <li>The quality and speed of the DSR connection depends mainly on the quality of the phone line and the
+              distance from the central office of your phone company. The farther you are from the central office, the
+              slower the connection. </li>>
+          </ul>
+      </ul>
+    </section>
+
+    <section aria-labelledby="additional-connectivity-options">
+      <h2 id="additional-connectivity-options">2.3.4 Additional Connectivity Options</h2>
+      <ul>
+        <li>Cellular <ul>
+            <li>Cellular Internet access uses a cell phone network to connect. </li>
+            <li>Wherever you can get a cellular signal, you can get cellular Internet access.
+            </li>
+            <li>Performance will be limited by the capabilities of the phone and the cell tower to which it is
+              connected. </li>
+            <li>The availability of cellular Internet access is a real benefit for people in areas that would otherwise
+              have no Internet connectivity at all, or for people who are constantly on the move. </li>
+            <li>The downside of cellular connectivity is that the carrierI. usually meters the bandwidth usage of the
+              connection and may charge extra bandwidth that exceeds the contract data plan. </li>
+          </ul>
+        </li>
+        <li>Satellite. <ul>
+            <li>Satellite service is a good option for homes or offices that do not have access to DSL or cable
+              satellite dishes. </li>
+            <li>Satellite dishes require clear line of sight to the satellite and so might be difficult in heavily
+              wooded areas or places with other overhead obstructions. </li>
+            <li>Speeds will vary depending on the contract, though they are generally good. </li>
+            <li>Equipment and installation costs can be high with. Moderate monthly fee thereafter. </li>
+            <li>Like cellular accessed, the availability of satellite Internet access is a real benefit in areas that
+              would otherwise have no Internet connectivity at all. </li>
+            <li>In metropolitan areas, many apartments and small offices are being connected directly with fiber optic
+              cables. This enables an Internet service provider to provide higher bandwidth speeds and support more
+              services such as Internet phone and TV. </li>
+          </ul>
+        <li>Dial up telephone. <ul>
+            <li>An inexpensive option that uses any phone line and a modem. </li>
+            <li>To connect to the ISP, your user calls the ISP access phone number. </li>
+            <li>The low bandwidth provided by a dial-up modem connection is usually not sufficient for large data
+              transfer, although it's useful for mobile access while traveling. </li>
+            <li>A modern dial-up connection should only be conceded when higher speed connection options are not
+              available. </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="peer-to-peer-applications">
+      <h2 id="peer-to-peer-applications">2.1.4 Peer-to-peer applications. </h2>
+      <ul>
+        <li>A P2P application allows a device to act as both a client and a server within the same communication. </li>
+        <li>In this model, every client is the server and every server is a client.</li>
+        <li>P2P applications require that each end device provider user interface and run a background service. </li>
+        <li>Applications use a hybrid system where resource sharing is decentralized, but the indexes that point to
+          resource locations are stored in a centralized directory. </li>
+        <li>In a hybrid system, each peer accesses an index server to get the location of a resource stored on another
+          peer. </li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="multiplie-roles-in-network">
+      <h2 id="multiplie-roles-in-network">2.1.5 Multiple roles in the network. </h2>
+      <ul>
+
+      </ul>
+      <img src="./graphics/multiple-roles.png" alt="Multiple roles in the network" />
+    </section>Alexa put a 15 minute timer on. 15 minutes, starting now.
+  </main>
+</body>
+
+</html>

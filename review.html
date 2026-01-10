@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Review Queue — OU Study Hub</title>
+  
+  
+  <link rel="stylesheet" href="assets/styles.css"/>
+  <script defer src="assets/manifest.js"></script>
+  <script defer src="assets/script.js"></script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner container">
+      <div class="brand"><a href="index.html">OU Study Hub</a></div>
+      <div class="navlinks">
+        <button class="btn" data-ou-mode-toggle onclick="ouToggleMode()">☀️ Light</button>
+        <a class="btn" href="index.html">Home</a>
+        <a class="btn" href="contents.html">Contents</a>
+        <a class="btn" href="navigation.html">Search</a>
+        <a class="btn" href="advice.html">Study Tips</a>
+        <a class="btn" href="review.html">Review</a>
+      </div>
+    </div>
+  </nav>
+  <main class="container">
+    <h1>Review Queue</h1>
+    <p class="kicker">Pages you marked for review, sorted by last opened (oldest first).</p>
+    <div class="grid" id="by-course"></div>
+    <section class="card" style="margin-top:16px;">
+      <h2>All Review Items</h2>
+      <div class="list" id="review-list"></div>
+    </section>
+  </main>
+  <footer class="footer">Built for our Open University journey — keep learning a little every day.</footer>
+  <script>
+  (async () => {
+    await ensureManifest(); const {pages} = window.__OU_MANIFEST__ || {pages:[]};
+    const st = JSON.parse(localStorage.getItem('ou_progress_v1')||'{}');
+    const review = pages
+      .map(p => ({...p, st: st[p.url]}))
+      .filter(x => x.st && x.st.review);
+    // sort oldest lastOpened first
+    review.sort((a,b)=>{
+      const ta = a.st.lastOpened ? Date.parse(a.st.lastOpened) : 0;
+      const tb = b.st.lastOpened ? Date.parse(b.st.lastOpened) : 0;
+      return ta - tb;
+    });
+    // Render list
+    const list = document.getElementById('review-list');
+    review.forEach(it => {
+      const a = document.createElement('a');
+      a.href = it.url;
+      const when = it.st.lastOpened ? new Date(it.st.lastOpened).toLocaleString() : 'never';
+      const tags = (it.tags && it.tags.length) ? ' [' + it.tags.join(', ') + ']' : '';
+      a.textContent = it.title + ' — ' + it.url.replace('content/','') + ' • last opened: ' + when + tags;
+      list.appendChild(a);
+    });
+    // By course cards
+    const byCourse = {};
+    review.forEach(it => {
+      const c = it.url.split('/')[1] || 'General';
+      (byCourse[c] ||= []).push(it);
+    });
+    const mount = document.getElementById('by-course');
+    Object.keys(byCourse).sort().forEach(c => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.setAttribute('data-theme', c);
+      const h2 = document.createElement('h2');
+      h2.textContent = c;
+      card.appendChild(h2);
+      const l = document.createElement('div');
+      l.className = 'list';
+      byCourse[c].forEach(it => {
+        const a = document.createElement('a');
+        a.href = it.url;
+        a.textContent = it.title;
+        l.appendChild(a);
+      });
+      card.appendChild(l);
+      // quick-start button
+      const start = document.createElement('button');
+      start.className = 'btn';
+      start.textContent = 'Start oldest';
+      start.addEventListener('click', ()=>{
+        const oldest = byCourse[c][0];
+        if(oldest) location.href = oldest.url;
+      });
+      card.appendChild(start);
+      mount.appendChild(card);
+    });
+  })();
+  </script>
+</body>
+</html>
