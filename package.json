@@ -1,0 +1,13 @@
+{
+  "name": "ou-study-hub-manifest-tool",
+  "version": "1.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build:manifests": "node build-manifests.mjs",
+    "watch:manifests": "node watch-manifests.mjs"
+  },
+  "dependencies": {
+    "chokidar": "^3.6.0"
+  }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>OU Study Hub — Search</title>
+  
+  
+  <link rel="stylesheet" href="assets/styles.css"/>
+  <script defer src="assets/manifest.js"></script>
+  <script defer src="assets/script.js"></script>
+</head>
+<body>
+  
+<nav class="nav">
+  <div class="nav-inner container">
+    <div class="brand"><a href="index.html">OU Study Hub</a></div>
+    <div class="navlinks"><button class="btn" data-ou-mode-toggle onclick="ouToggleMode()">☀️ Light</button>
+      <a class="btn" href="index.html">Home</a>
+      <a class="btn" href="contents.html">Contents</a>
+      <a class="btn" href="navigation.html">Search</a>
+      <a class="btn" href="advice.html">Study Tips</a>
+      <a class="btn" href="review.html">Review</a>
+    </div>
+  </div>
+</nav>
+
+  <main class="container">
+<h1>Search</h1>
+<p class="kicker">Type to filter by title or path. Hit Enter to open the top result.</p>
+<input id="q" class="search" placeholder="Search notes (e.g., 'bandwidth', 'BIDMAS', 'IoT')"/>
+<div class="grid" id="tag-chips" style="margin:12px 0;"></div>
+<p><span id="count">0</span> results</p>
+<div id="results" class="list"></div>
+</main>
+  
+<footer class="footer">
+  Built for our Open University journey — keep learning a little every day.
+</footer>
+
+
+
+<script>window.addEventListener("load",function(){ if(window.OU_onSearch) window.OU_onSearch(); });</script>
+</body>
+</html>

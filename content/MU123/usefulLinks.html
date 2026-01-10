@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta charset="UTF-8" />
+  <title>Useful Links</title>
+  <link rel="stylesheet" href="../../assets/styles.css" />
+  <script>
+    (function () {
+      var path = location.pathname.replace(/\\/g, '/');
+      var idx = path.indexOf('/content/');
+      var prefix = '';
+      if (idx !== -1) {
+        var after = path.slice(idx + '/content/'.length);
+        var depth = (after.match(/\//g) || []).length;
+        prefix = '../'.repeat(depth + 1);
+      }
+      if (!document.querySelector('link[data-ou-styles]')) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = prefix + 'assets/styles.css';
+        link.setAttribute('data-ou-styles', '');
+        document.head.appendChild(link);
+      }
+      function add(js) {
+        if (document.querySelector('script[src$="/' + js + '"]')) return;
+        var s = document.createElement('script');
+        s.defer = true;
+        s.src = prefix + 'assets/' + js;
+        document.head.appendChild(s);
+      }
+      add('manifest.js');
+      add('script.js');
+      add('content.js');
+    })();
+  </script>
+</head>
+
+<body>
+  <h1>Useful Links</h1>
+  <ul>
+    <li><a href="https://www.mathsisfun.com/">Math is Fun</a></li>
+    <li><a href="https://www.khanacademy.org/">Khan Academy</a></li>
+    <li><a href="https://www.cuemath.com/">Cuemath</a></li>
+    <li><a href="https://www.bbc.co.uk/bitesize/subjects/zqhs34j">BBC Bitesize</a></li>
+    <li><a href="https://www.education.com/resources/math/">Education.com</a></li>
+    <li><a href="https://www.ixl.com/math/">IXL Math</a></li>
+    <li><a href="https://www.prodigygame.com/">Prodigy Math Game</a></li>
+    <li><a
+        href="https://www.open.edu/openlearn/science-maths-technology/succeed-maths-part-1/content-section-overview?_gl=1*11x7nuj*_gcl_au*MTc5NDk4OTU0OC4xNzU4NzIyOTA5&active-tab=description-tab">Open
+        University - Succeed with Maths</a></li>
+    <li><a
+        href="https://www.open.edu/openlearn/science-maths-technology/succeed-maths-part-2/content-section-overview?_gl=1*vfdrno*_gcl_au*MTc5NDk4OTU0OC4xNzU4NzIyOTA5">Open
+        University - Succeed with Maths Part 2</a></li>
+    <li><a href="https://learn1.open.ac.uk/course/view.php?id=100193&cmid=22179">Open University - Maths Help</a></li>
+  </ul>
+
+</body>
+
+</html>
