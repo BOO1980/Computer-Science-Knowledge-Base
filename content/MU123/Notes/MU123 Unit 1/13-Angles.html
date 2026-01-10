@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Angles</title>
+    <meta name="description" content="Introduction to clients and servers in networking." />
+    <script>document.documentElement.setAttribute('data-theme', 'TM129');</script>
+    <link rel="stylesheet" href="../../../../assets/styles.css" />
+    <script>
+        (function () {
+            var path = location.pathname.replace(/\\/g, '/');
+            var idx = path.indexOf('/content/');
+            var prefix = '';
+            if (idx !== -1) {
+                var after = path.slice(idx + '/content/'.length);
+                var depth = (after.match(/\//g) || []).length;
+                prefix = '../'.repeat(depth + 1);
+            }
+            if (!document.querySelector('link[data-ou-styles]')) {
+                var link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = prefix + 'assets/styles.css';
+                link.setAttribute('data-ou-styles', '');
+                document.head.appendChild(link);
+            }
+            function add(js) {
+                if (document.querySelector('script[src$="/' + js + '"]')) return;
+                var s = document.createElement('script');
+                s.defer = true;
+                s.src = prefix + 'assets/' + js;
+                document.head.appendChild(s);
+            }
+            add('manifest.js');
+            add('script.js');
+            add('content.js');
+        })();
+    </script>
+</head>
+
+<body>
+    <h1>
+        Angles</h1>
+    <ul>
+        <li>An angle is formed when two lines meet at a point called the vertex.</li>
+        <li>Angles are measured in degrees (°) using a protractor.</li>
+        <li>A full circle is 360°, a half circle is 180°, and a right angle is 90°.</li>
+        <li>Types of angles:
+            <ul>
+                <li>Acute angle: less than 90°</li>
+                <li>Right angle: exactly 90°</li>
+                <li>Obtuse angle: between 90° and 180°</li>
+                <li>Straight angle: exactly 180°</li>
+                <li>Reflex angle: between 180° and 360°</li>
+            </ul>
+        </li>
+        <li>The sum of angles around a point is 360°.</li>
+
+        <li>The sum of angles on a straight line is 180°.</li>
+        <li>The sum of angles in a triangle is always 180°.</li>
+        <li>The sum of angles in a quadrilateral is always 360°.</li>
+        <li>Complementary angles are two angles that add up to 90°.</li>
+        <li>Supplementary angles are two angles that add up to 180°.</li>
+    </ul>
+
+    <h2>Questions</h2>
+    <p>Question 1: A plan from a DIY booklet shows a shelf and its metal bracket. The shelf makes a right angle with the
+        wall. The size of one of the angles is given (28°). What is the size of the other angle?</p>
+    <p>
+        Answer: Since the shelf makes a right angle with the wall, the two angles must add up to 90°. Therefore, the
+        size of
+        the other angle can be calculated as follows:
+        <br /> Other angle = 90° - 28° = 62°
+        <br /> So, the size of the other angle is 62°.
+    </p>
+    <h2>Useful Links</h2>
+    <ul>
+        <li><a href="https://www.bbc.co.uk/bitesize/guides/z3c6tfr/revision/1">BBC Bitesize - Radius</a></li>
+        <li><a
+                href="https://www.khanacademy.org/math/geometry/hs-geo-circles/hs-geo-radius-diameter-circumference/v/radius-diameter-and-circumference">Khan
+                Academy - Radius, Diameter and Circumference</a></li>
+        <li><a href="https://www.mathsisfun.com/geometry/circle-radius.html">Math is Fun - Circle Radius</a></li>
+
+
+    </ul>
+
+</body>
+
+</html>

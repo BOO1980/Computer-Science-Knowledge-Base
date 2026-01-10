@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta charset="UTF-8" />
+    <title>Area</title>
+    <link rel="stylesheet" href="../../../../assets/styles.css" />
+    <script>
+        (function () {
+            var path = location.pathname.replace(/\\/g, '/');
+            var idx = path.indexOf('/content/');
+            var prefix = '';
+            if (idx !== -1) {
+                var after = path.slice(idx + '/content/'.length);
+                var depth = (after.match(/\//g) || []).length;
+                prefix = '../'.repeat(depth + 1);
+            }
+            if (!document.querySelector('link[data-ou-styles]')) {
+                var link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = prefix + 'assets/styles.css';
+                link.setAttribute('data-ou-styles', '');
+                document.head.appendChild(link);
+            }
+            function add(js) {
+                if (document.querySelector('script[src$="/' + js + '"]')) return;
+                var s = document.createElement('script');
+                s.defer = true;
+                s.src = prefix + 'assets/' + js;
+                document.head.appendChild(s);
+            }
+            add('manifest.js');
+            add('script.js');
+            add('content.js');
+        })();
+    </script>
+</head>
+
+<body>
+    <h1>Area</h1>
+    <ul>
+        <li><strong>Area</strong> is the amount of space inside a 2D shape, measured in square units.</li>
+        <li>The area of a rectangle is calculated by multiplying its length by its width: <em>Area = length ×
+                width</em>.</li>
+        <li>The area of a triangle is calculated using the formula: <em>Area = 0.5 × base × height</em>.</li>
+        <li>The area of a circle is calculated using the formula: <em>Area = π × radius²</em>, where π (pi) is
+            approximately 3.14159.</li>
+        <li>To find the area of irregular shapes, you can divide them into regular shapes, calculate the area of each,
+            and then sum them up.</li>
+    </ul>
+    <h2>Questions</h2>
+    <p>Question 1: You are considering buying carpet tiles for a room you are decorating. In which of the
+        following sizes are the tiles likely to be available? Give a reason for your choice?</p>
+    <p>Answer: The tiles are likely to be available in standard sizes such as 3m by 3m. These sizes are common
+        in the industry and provide flexibility for various room layouts.</p>
+    <h2>Useful Links</h2>
+    <ul>
+        <li><a href="https://www.khanacademy.org/math/geometry/area-perimeter">Khan Academy - Area and Perimeter</a>
+        </li>
+        <li><a href="https://www.mathsisfun.com/geometry/area.html">Math is Fun - Area</a></li>
+        <li><a href="https://www.khanacademy.org/math/geometry/area-perimeter/geometry-area/e/geometry-area">Khan
+                Academy - Area</a></li>
+    </ul>
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4.0 Introduction</title>
+  <link rel="stylesheet" href="../../../../assets/styles.css" />
+  <script>
+    (function () {
+      var path = location.pathname.replace(/\\/g, '/');
+      var idx = path.indexOf('/content/');
+      var prefix = '';
+      if (idx !== -1) {
+        var after = path.slice(idx + '/content/'.length);
+        var depth = (after.match(/\//g) || []).length;
+        prefix = '../'.repeat(depth + 1);
+      }
+      if (!document.querySelector('link[data-ou-styles]')) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = prefix + 'assets/styles.css';
+        link.setAttribute('data-ou-styles', '');
+        document.head.appendChild(link);
+      }
+      function add(js) {
+        if (document.querySelector('script[src$="/' + js + '"]')) return;
+        var s = document.createElement('script');
+        s.defer = true;
+        s.src = prefix + 'assets/' + js;
+        document.head.appendChild(s);
+      }
+      add('manifest.js');
+      add('script.js');
+      add('content.js');
+    })();
+  </script>
+</head>
+
+<body>
+  <h1>4.0 Introduction</h1>
+  <ul>
+    <li>This module enables you to configure an integrated wireless router and wireless client to connect securely to
+      the internet.</li>
+  </ul>
+  <h2>4.0.2 What will I learn in this module?</h2>
+  <ul>
+    <li>Home Network Basics: Describe the components required to build a home network.</li>
+    <li>Netwok Technologies in the home: Describe wired and wireless network technologies.</li>
+    <li>Wireless Standards: Describe Wi-Fi</li>
+    <li>Set up a Home Router: Configure wireless devices for secure communications</li>
+  </ul>
+</body>
+
+</html>

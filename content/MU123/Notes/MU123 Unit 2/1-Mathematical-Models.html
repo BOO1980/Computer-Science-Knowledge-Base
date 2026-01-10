@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mathmatical Models</title>
+    <meta name="description" content="Introduction to clients and servers in networking." />
+    <script>document.documentElement.setAttribute('data-theme', 'TM129');</script>
+    <link rel="stylesheet" href="../../../../assets/styles.css" />
+    <script>
+        (function () {
+            var path = location.pathname.replace(/\\/g, '/');
+            var idx = path.indexOf('/content/');
+            var prefix = '';
+            if (idx !== -1) {
+                var after = path.slice(idx + '/content/'.length);
+                var depth = (after.match(/\//g) || []).length;
+                prefix = '../'.repeat(depth + 1);
+            }
+            if (!document.querySelector('link[data-ou-styles]')) {
+                var link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = prefix + 'assets/styles.css';
+                link.setAttribute('data-ou-styles', '');
+                document.head.appendChild(link);
+            }
+            function add(js) {
+                if (document.querySelector('script[src$="/' + js + '"]')) return;
+                var s = document.createElement('script');
+                s.defer = true;
+                s.src = prefix + 'assets/' + js;
+                document.head.appendChild(s);
+            }
+            add('manifest.js');
+            add('script.js');
+            add('content.js');
+        })();
+    </script>
+</head>
+
+<body>
+    <h1>
+        Mathmatical Models </h1>
+    <ul>
+
+        <h2>Questions</h2>
+        <ul>
+            <li>here are some estimates
+                for the time for the car journey between Great Malvern and Milton
+                Keynes, provided by different route planners using various routes:
+                1 h 36 min, 1 h 58 min, 2 h 3 min, 2 h 5 min, 2 h 8 min, 2 h 19 min,
+                2 h 21 min, 2 h 33 min, 2 h 48 min, 3 h 19 min.<ul>
+                    <li>Why might the route planners estimate different times for the
+                        journey?
+                        ans: Different route planners may use different algorithms, traffic data,
+                        and assumptions about driving conditions, leading to varying estimates.
+                    </li>
+                    <li>From Figure 1, the distance in a straight line between Great Malvern
+                        and Milton Keynes appears to be just over 100 kilometres. Assuming
+                        that the car travels about 50 kilometres in an hour, what is an
+                        estimate for the journey time? Do you think this estimate is good
+                        enough for planning the time to set off?
+                        ans: An estimate based on a straight-line distance of just over 100
+                        kilometres at 50 kilometres per hour would be just over 2 hours. This
+                        estimate may not account for factors such as traffic, road conditions,
+                        and stops along the way, so it might be wise to allow extra time.
+                    </li>
+                </ul>
+
+            </li>
+            <li>
+                The map is scaled 20km per 2cm (10 km/cm).
+                <ul>
+                    <li>On the map, the distance along the route from Great Malvern to
+                        Milton Keynes is 13.8 cm, and the distance along the motorway
+                        section of the route is 3 cm (to the nearest mm). What are the
+                        corresponding ground distances, in kilometres?
+
+                        ans: The total distance from Great Malvern to Milton Keynes is 138
+                        kilometres (13.8 cm * 10 km/cm). The motorway section is 30
+                        kilometres (3 cm * 10 km/cm).</li>
+                    <li>Apart from the section on the motorway, the rest of the route is on
+                        principal roads. Use your answers to part (a) to find the distance on
+                        the principal roads, in kilometres
+
+                        ans: The distance on principal roads is 108 kilometres (138 km - 30
+                        km).</li>
+                    <li>What distance on the map represents 25 km on the ground?
+                        ans: 2.5 cm on the map represents 25 km on the ground (25 km / 10
+                        km/cm).</li>
+                </ul>
+            </li>
+            <li>A map scale is given in words as ‘1 cm represents 20 km’. What is
+                the scale factor?<ul>
+                    <li>20k = (20x 1000)</li>
+                    <li>20000m</li>
+                    <li>20000m x 100cm</li>
+                    <li>2000000cm</li>
+                    <li>1:2000000</li>
+                </ul>
+            </li>
+            <li>A map scale is given as 1 : 250 000. Express this map scale in the
+                form ‘1 cm represents ?? km’
+                <ul>
+                    <li>250000 / 100 = 2500</li>
+                    <li>2500 / 1000 = 2.5</li>
+                    <li>1 cm represents 2.5 km</li>
+                </ul>
+            </li>
+            <li>A map scale is given as ‘1 cm represents 10 km’. What is the scale
+                factor?<ul>
+                    <li>10 km = (10 x 1000)</li>
+                    <li>10000m</li>
+                    <li>10000m x 100cm</li>
+                    <li>1000000cm</li>
+                    <li>1:1000000</li>
+                </ul>
+            </li>
+            <li>A map scale is given as 1 : 500 000. Express this map scale in the form
+                ‘1 cm represents ?? km
+                <ul>
+                    <li>500000m</li>
+                    <li>500000m / 1000 = 500km</li>
+                    <li>1 cm represents 5 km</li>
+
+                </ul>
+            </li>
+
+            <li>The scale of a map is 1 : 250 000
+                <ul>
+                    <li>The distance on the map between two places is 7.5 cm. What is
+                        the corresponding distance on the ground? Give your answer to
+                        two significant figures.
+                        <ul>
+                            <li>7.5cm x 250000 = 1875000cm</li>
+                            <li>1875000cm / 100 = 18750m</li>
+                            <li>18750m / 1000 = 18.75km</li>
+                        </ul>
+                    </li>
+                    <li>The distance on the ground between two places is 58.4 km. What
+                        is the corresponding distance on the map? Give your answer to
+                        three significant figures.</li>
+                    <ul>
+                        <li>58.4km x 1000 = 58400m</li>
+                        <li>58400m x 100 = 5840000cm</li>
+                        <li>5840000cm / 250000 = 23.36cm</li>
+                        <li>23.36cm to three significant figures is 23.4cm.</li>
+                    </ul>
+                </ul>
+            </li>
+            <li>Consider a map with scale 1 : 50 000.<ul>
+                    <li>The distance between two towns on the map is 3.4 cm. What is the
+                        distance between them on the ground?<ul>
+                            <li>
+                                3.4cm x 50000 = 170000cm</li>
+                            <li>170000cm / 100 = 1700m</li>
+                            <li>1700m / 1000 = 1.7km</li>
+                        </ul>
+                    </li>
+                    <li>The distance along a road is 7.85 km. What is the corresponding
+                        distance on the map?<ul>
+                            <li>7.85km x 1000 = 7850m</li>
+                            <li>7850m x 100 = 785000cm</li>
+                            <li>785000cm / 50000 = 15.7cm</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Suppose that a car travels a distance of 75 km in 45 minutes on a
+                motorway. What is its average speed? Give your answer in km/h.<ul>
+                    <li>First, convert 45 minutes to hours: 45 minutes = 45/60 hours = 0.75 hours.</li>
+                    <li>Now, use the formula for average speed: Average speed = Total distance / Total time.</li>
+                    <li>Average speed = 75 km / 0.75 hours = 100 km/h.</li>
+                </ul>
+            </li>
+            <li>Find the average speeds for the following journeys, rounding your answers
+                to two significant figures. Give your answers to parts (a) and (b) in km/h,
+                and your answer to part (c) in m/s<ul>
+                    <li>A journey of 425 km on the motorway that takes 4 hours<ul>
+                            <li>Average speed = Total distance / Total time = 425 km / 4 hours = 106.25 km/h</li>
+                            <li>Rounding to two significant figures gives 110 km/h.</li>
+                        </ul>
+                    </li>
+                    <li>A 30 km journey through a city that takes 1 hour 25 minutes<ul>
+                            <li>First, convert 1 hour 25 minutes to hours: 1 hour 25 minutes = 1 + 25/60 = 1.4167 hours.
+                            </li>
+                            <li>Average speed = Total distance / Total time = 30 km / 1.4167 hours = 21.14 km/h.</li>
+                            <li>Rounding to two significant figures gives 21 km/h.</li>
+                        </ul>
+                    </li>
+                    <li>A 100 m sprint that takes 14 seconds work out the in m/s<ul>
+                            <li>Average speed = Total distance / Total time = 100 m / 14 s = 7.14 m/s.</li>
+                            <li>Rounding to two significant figures gives 7.1 m/s.</li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </li>
+        </ul>
+        <h2>Useful Links</h2>
+        <ul>
+
+        </ul>
+
+</body>
+
+</html>

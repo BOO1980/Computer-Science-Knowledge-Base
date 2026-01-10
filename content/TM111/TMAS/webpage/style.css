@@ -1,0 +1,63 @@
+/* General Page Setup */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f9f9fb;
+  color: #333;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Header */
+.page-header {
+  text-align: center;
+  background: linear-gradient(135deg, #004aad, #007bff);
+  color: white;
+  padding: 3rem 1rem;
+  border-bottom: 4px solid #003b8e;
+}
+
+.page-header h1 {
+  font-size: 3rem;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.page-header .author {
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+  opacity: 0.9;
+  text-align: center; /* ensure it aligns under the title */
+  display: block;
+}
+
+/* Main Content */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+h2 {
+  color: #004aad;
+  margin-top: 2rem;
+  font-size: 1.6rem;
+}
+
+p {
+  font-size: 1rem;
+  text-align: justify;
+}
+
+/* Image Section */
+img {
+  display: block;
+  margin: 1.5rem auto;
+  max-width: 100%;
+  border-radius: 10px;
+}
+.image-reference {
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 0.5rem;
+  color: #555;
+}

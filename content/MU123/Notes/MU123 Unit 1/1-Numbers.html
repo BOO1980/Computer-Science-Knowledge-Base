@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Numbers</title>
+    <meta name="description" content="Introduction to clients and servers in networking." />
+    <script>document.documentElement.setAttribute('data-theme', 'TM129');</script>
+    <link rel="stylesheet" href="../../../../assets/styles.css" />
+    <script>
+        (function () {
+            var path = location.pathname.replace(/\\/g, '/');
+            var idx = path.indexOf('/content/');
+            var prefix = '';
+            if (idx !== -1) {
+                var after = path.slice(idx + '/content/'.length);
+                var depth = (after.match(/\//g) || []).length;
+                prefix = '../'.repeat(depth + 1);
+            }
+            if (!document.querySelector('link[data-ou-styles]')) {
+                var link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = prefix + 'assets/styles.css';
+                link.setAttribute('data-ou-styles', '');
+                document.head.appendChild(link);
+            }
+            function add(js) {
+                if (document.querySelector('script[src$="/' + js + '"]')) return;
+                var s = document.createElement('script');
+                s.defer = true;
+                s.src = prefix + 'assets/' + js;
+                document.head.appendChild(s);
+            }
+            add('manifest.js');
+            add('script.js');
+            add('content.js');
+        })();
+    </script>
+</head>
+
+<body>
+    <h1>
+        Numbers </h1>
+    <ul>
+        <li>Numbers are used to specify quantity or amount. For example, people give their ages as a number of years.
+        </li>
+        <li>Votes in elections may be described in thousands. </li>
+        <li>Temperatures are measured in positive and negative degrees Celsius. </li>
+        <li>Number smaller than one may be expressed as fractions or decimals. </li>
+        <h2>Whole Numbers</h2>
+        <ul>
+            <li>Whole numbers arise from counting, for example, the number of sheep in a field or the number of votes in
+                an election. </li>
+            <li>Our everyday number system is the decimal system, where the position of a digital within the number
+                determines whether it represents units, tens, thousands or hundreds, etc. </li>
+        </ul>
+        <h2>Using the place value. </h2>
+        <ul>
+            <li>Writing numbers in place value columns gives an easy way of multiplying by 10, 100, 1000 and so on.</li>
+            <li>For example, to multiply 345 by 10, we can write the number in place value columns and then move each
+                digit one place to the left. </li>
+            <li>Similarly, to multiply by 100 we move each digit two places to the left. </li>
+            <li>To divide by 10, 100 or 1000 we move the digits to the right. </li>
+            <li>For example, to divide 345 by 10 we move each digit one place to the right. </li>
+        </ul>
+        <h2>Number lines</h2>
+        <ul>
+            <li>Number lines are a visual representation of numbers in order.</li>
+            <li>They can be used to help understand addition and subtraction.</li>
+            <li>For example, to add 3 + 2, you can start at 3 on the number line and count 2 spaces to the right to get
+                5.</li>
+        </ul>
+        <h2>Questions</h2>
+
+        <h2>Useful Links</h2>
+        <ul>
+
+        </ul>
+
+</body>
+
+</html>

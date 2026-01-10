@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Radius</title>
+    <meta name="description" content="Introduction to clients and servers in networking." />
+    <script>document.documentElement.setAttribute('data-theme', 'TM129');</script>
+    <link rel="stylesheet" href="../../../../assets/styles.css" />
+    <script>
+        (function () {
+            var path = location.pathname.replace(/\\/g, '/');
+            var idx = path.indexOf('/content/');
+            var prefix = '';
+            if (idx !== -1) {
+                var after = path.slice(idx + '/content/'.length);
+                var depth = (after.match(/\//g) || []).length;
+                prefix = '../'.repeat(depth + 1);
+            }
+            if (!document.querySelector('link[data-ou-styles]')) {
+                var link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = prefix + 'assets/styles.css';
+                link.setAttribute('data-ou-styles', '');
+                document.head.appendChild(link);
+            }
+            function add(js) {
+                if (document.querySelector('script[src$="/' + js + '"]')) return;
+                var s = document.createElement('script');
+                s.defer = true;
+                s.src = prefix + 'assets/' + js;
+                document.head.appendChild(s);
+            }
+            add('manifest.js');
+            add('script.js');
+            add('content.js');
+        })();
+    </script>
+</head>
+
+<body>
+    <h1>
+        Radius</h1>
+    <ul>
+        <li>The radius of a circle is the distance from the center of the circle to any point on its circumference.</li>
+        <li>The radius is half the length of the diameter, which is the distance across the circle through its center.
+            Therefore, if you know the diameter (d) of a circle, you can find the radius (r) using the formula: r = d /
+            2.
+        </li>
+        <li>The radius is an important measurement in geometry and is used in various calculations involving circles,
+            such as finding the area and circumference.</li>
+        <li>The area (A) of a circle can be calculated using the formula: A = πr², where r is the radius and π (pi) is
+            approximately 3.14159.</li>
+        <li>The circumference (C) of a circle can be calculated using the formula: C = 2πr, where r is the radius.</li>
+        <li>In three-dimensional geometry, the radius is also used to describe spheres. The radius of a sphere is the
+            distance from its center to any point on its surface.</li>
+    </ul>
+
+    <h2>Questions</h2>
+    <p>Question 1: A garden is 7m x 5m and has a circular flower bed in the center. with a radius of 1.5m. . If 400
+        grams of grass seed covers 8 square metres, how much grass seed will be needed to re-seed the lawn? </p>
+    <p>First, calculate the area of the garden:</p>
+    <p>Area of garden = length × width = 7m × 5m = 35m²</p>
+    <p>Next, calculate the area of the circular flower bed using the formula A = πr²:</p>
+    <p>Area of flower bed = π × (1.5m)² = π × 2.25m² ≈ 7.07m²</p>
+    <p>Now, subtract the area of the flower bed from the area of the garden to find the area of the lawn:</p>
+    <p>Area of lawn = Area of garden - Area of flower bed = 35m² - 7.07m² ≈ 27.93m²</p>
+    <p>Finally, calculate the amount of grass seed needed:</p>
+    <p>Grass seed needed = (Area of lawn / Area covered by 400 grams) × 400 grams = (27.93m² / 8m²) × 400 grams ≈ 1396.5
+        grams</p>
+    <p>So, approximately 1396.5 grams of grass seed will be needed to re-seed the lawn.</p>
+    <h2>Useful Links</h2>
+    <ul>
+        <li><a href="https://www.bbc.co.uk/bitesize/guides/z3c6tfr/revision/1">BBC Bitesize - Radius</a></li>
+        <li><a
+                href="https://www.khanacademy.org/math/geometry/hs-geo-circles/hs-geo-radius-diameter-circumference/v/radius-diameter-and-circumference">Khan
+                Academy - Radius, Diameter and Circumference</a></li>
+        <li><a href="https://www.mathsisfun.com/geometry/circle-radius.html">Math is Fun - Circle Radius</a></li>
+
+
+    </ul>
+
+</body>
+
+</html>
